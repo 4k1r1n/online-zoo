@@ -1,0 +1,31 @@
+$_green: #4B9200;
+$_yellow: #FFEE2E;
+$_orange: #FE9013;
+$_gradient-orange-bright: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$_gradient-orange-faded: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$_gradient-pink: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+$_red: #D31414;
+$_black-blue: #333B41;
+$_gray: #767474;
+$_gray-smoky: #ABABAB;
+$_gray-lighter: #F1F3F2;
+$_gray-light: #BDBDBD;
+$_white-frosted-glass: rgba(253, 253, 255, 0.52);
+$_white: #ffffff;
+
+$color-primary: $_gradient-orange-bright;
+$color-additional: $_orange;
+$color-text-selection: $_yellow;
+$color-error: $_red;
+$color-light: $_white;
+$color-text: $_black-blue;
+$color-border: $_gradient-pink;
+$color-testimonial-text: $_gradient-pink;
+$color-active-buttons: $_gray;
+$color-disabled-buttons: $_gray;
+$color-hover-buttons: #E47209;
+
+$content-width: 1160px;
+$small-desktop-width: 1000px;
+$tablet-width: 640px;
+$mobile-width: 320px;
