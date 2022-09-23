@@ -22,6 +22,8 @@
         justify-content: center;
         background: $color-primary;
         cursor: pointer;
+
+        &:hover {}
     }
 
     &--arrow-left {

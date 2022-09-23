@@ -24,10 +24,20 @@
 }
 
 .pet {
-    &__img {
-        // width: 100%;
-        // height: auto;
+    cursor: pointer;
+
+    &__container {
+        overflow: hidden;
+    }
+
+    &__image {
         border-radius: 5px 5px 0 0;
+        transition: all 1s;
+        position: relative;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 
     &__info {

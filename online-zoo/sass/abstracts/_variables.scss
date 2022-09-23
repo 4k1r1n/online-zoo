@@ -17,14 +17,16 @@ $_black: #000000;
 $font-stack: 'Roboto', Verdana, sans-serif;
 $color-primary: $_gradient-orange-bright;
 $color-additional: $_orange;
+$color-overlay: rgba(0, 0, 0, 0.3);
 $color-text-selection: $_yellow;
 $color-error: $_red;
 $color-light: $_white;
 $color-dark: $_black;
+// переименовать 
 $color-text: $_black-blue;
+$color-default-button: $_black-blue;
 $color-border: $_gradient-pink;
 $color-testimonial-text: $_gradient-pink;
-$color-default-button: $_black-blue;
 $color-active-buttons: $_green;
 $color-disabled-buttons: $_gray;
 $color-background-button: $_gray-lighter;
