@@ -1,0 +1,20 @@
+.link {
+    text-decoration: none;
+    background: $_gradient-orange-bright;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: $color-light;
+    @extend %transition;
+
+    &[data-active] {
+        color: $color-transparent;
+    }
+
+    &:hover {
+        color: $color-transparent;
+    }
+
+    &:active {
+        color: $color-transparent;
+    }
+}
