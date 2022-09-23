@@ -1,0 +1,5 @@
+.layout-2-column {
+    @include columns($width: 40%);
+}
+
+.layout-4-column {}
