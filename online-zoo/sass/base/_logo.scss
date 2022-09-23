@@ -1,0 +1,23 @@
+.logo {
+    text-decoration: none;
+    color: $color-light;
+
+    &__title {
+        position: relative;
+        padding: 3px;
+        margin: 0;
+        text-align: center;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 13px;
+            width: 7px;
+            height: 21px;
+            background-image: url("../assets/images/icons/bamboo.svg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
