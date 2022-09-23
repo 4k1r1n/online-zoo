@@ -26,6 +26,35 @@
         &:hover {}
     }
 
+    &-square {
+        width: 168px;
+        height: 168px;
+    }
+
+    &--pay {
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/icons/pay.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--zoo {
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/icons/zoo.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--monkey {
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/images/icons/monkey.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     &--arrow-left {
         width: 16px;
         height: 8px;
