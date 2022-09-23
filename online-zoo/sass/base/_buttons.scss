@@ -1,0 +1,63 @@
+.link-button {
+    display: block;
+    width: 298px;
+    padding: 16px 0;
+    @include font($weight: 500);
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-light;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1;
+    @extend %transition;
+    background-size: 300% 100%;
+
+    &--gradiented {
+        background-image: $color-primary;
+    }
+
+    &--rounded {
+        border-radius: 25px;
+    }
+
+    &--colored {
+        background-color: $color-additional;
+    }
+
+    &--semi-rounded {
+        border-radius: 5px;
+    }
+
+    &:hover {
+        @extend %transition;
+        background-position: 100% 0;
+        background-color: $color-hover-buttons;
+    }
+
+    &:active {
+        background-color: $color-active-buttons;
+    }
+
+    &:disabled {
+        background-color: $color-disabled-buttons;
+    }
+}
+
+.button {
+    padding: 10px 39px;
+    color: $color-default-button;
+    background-image: $color-background-button;
+    border: 1px solid $color-default-button;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:active {
+        color: $color-active-buttons;
+        border-color: $color-active-buttons;
+    }
+
+    &:disabled {
+        color: $color-error;
+        border-color: $color-error;
+    }
+}
