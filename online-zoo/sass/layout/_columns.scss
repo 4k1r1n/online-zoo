@@ -2,4 +2,9 @@
     @include columns($width: 40%);
 }
 
+.layout-3-column {
+    @include columns($width: 31%);
+    row-gap: 20px;
+}
+
 .layout-4-column {}

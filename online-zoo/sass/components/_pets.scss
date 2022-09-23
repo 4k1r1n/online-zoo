@@ -1,0 +1,54 @@
+.pets {
+    padding: 0 0 100px;
+    background: url("../assets/images/icons/strelitzia 1.png") no-repeat right bottom, url("../assets/images/icons/palm_foto.png") no-repeat left bottom;
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__link-button {
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    &__arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 114%;
+        top: 40%;
+        right: -7%;
+        // right: 50%;
+        // transform: translate(43%, -50%);
+    }
+}
+
+.pet {
+    &__img {
+        // width: 100%;
+        // height: auto;
+        border-radius: 5px 5px 0 0;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px 13px 16px;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        @include font($weight: 500);
+        margin: 0;
+    }
+
+    &__title {
+        @include font ($size: 1.5rem, $height: 1.8rem, $weight: 300);
+        margin: 0;
+    }
+}
+
+.block-bordered {
+    @include gradient-border($gradient: $_gradient-orange-bright, $width: 1px, $radius: 5px);
+}

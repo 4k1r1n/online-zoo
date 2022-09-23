@@ -1,0 +1,39 @@
+.icon {
+    display: inline-block;
+
+    &--herbivorous {
+        width: 33px;
+        height: 37px;
+        background-image: url("../assets/images/icons/banana-bamboo_icon.svg");
+    }
+
+    &--carnivores {
+        width: 48px;
+        height: 38px;
+        background-image: url("../assets/images/icons/meet-fish_icon.svg");
+    }
+
+    &-round {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-primary;
+        cursor: pointer;
+    }
+
+    &--arrow-left {
+        width: 16px;
+        height: 8px;
+        background-image: url("../assets/images/icons/arrow-slider.svg");
+    }
+
+    &--arrow-right {
+        width: 16px;
+        height: 8px;
+        transform: rotate(180deg);
+        background-image: url("../assets/images/icons/arrow-slider.svg");
+    }
+}

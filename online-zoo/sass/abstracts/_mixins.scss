@@ -15,6 +15,24 @@
     }
 }
 
+@mixin gradient-border($gradient, $width, $radius) {
+    position: relative;
+    background: $color-light;
+    border-radius: $radius;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -$width;
+        right: -$width;
+        bottom: -$width;
+        left: -$width;
+        z-index: -1;
+        border-radius: inherit;
+        background: $gradient;
+    }
+}
+
 @mixin media-laptop {
     @media (max-width: $content-width) {
         @content;
