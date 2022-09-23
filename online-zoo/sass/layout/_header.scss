@@ -1,0 +1,23 @@
+.header {
+    background: $color-dark;
+    backdrop-filter: blur(2px);
+    padding: 14px 0;
+    color: $color-light;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 63px;
+    }
+
+    &__logo {
+        width: 82px;
+        height: 52px;
+        border: 1px solid $color-light;
+        border-radius: 2px;
+    }
+
+    &__copyright {
+        margin-left: auto;
+    }
+}
