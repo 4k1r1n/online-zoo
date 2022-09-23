@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetStory Online</title>
-    <link rel="icon" type="image/x-icon" href="../../assets/icons/favicon.ico">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../sass/main.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
             <nav class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__item">
-                        <a href="./index.html" class="link">About</a>
+                        <a href="./index.html" class="link" data-active="true">About</a>
                     </li>
                     <li class="navigation__item">
                         <a href="#" class="link">Map</a>
@@ -46,7 +46,8 @@
     <section class="preview">
         <div class="wrapper preview__wrapper">
             <div class="preview__content">
-                <p class="preview__title">Watch your favorite animal online</p>
+                <p class="preview__title">Watch your <span class="preview__title--word-colored">favorite</span> animal
+                    online</p>
                 <div class="preview__link-button">
                     <a href="#" class="link-button link-button--gradiented link-button--rounded">Watch online</a>
                 </div>
@@ -58,16 +59,21 @@
             <div class="layout-2-column">
                 <img src="../../assets/images/backstage/bamboo-cap.jpg" alt="Man in bamboo hat" class="backstage__img">
                 <div class="backstage__content">
-                    <h2 class="backstage__title">The Backstage of the Wilderness World.</h2>
-                    <p class="backstage__text">The site was founded on the basis of a volunteer movement to protect and
-                        care
-                        for animals.</p>
+                    <div class="backstage__header">
+                        <h2 class="backstage__title">The Backstage of the Wilderness World.</h2>
+                        <p class="backstage__text">The site was founded on the basis of a volunteer movement to protect
+                            and
+                            care
+                            for animals.</p>
+                    </div>
                     <p class="backstage__subtitle subtitle">How it works</p>
-                    <p class="backstage__text">The main goal is to help the animals, as well as the nature reserves and
+                    <p class="backstage__text">The main goal is to help the animals, as well as the nature reserves
+                        and
                         zoos
                         where they are kept. We are currently working on video projects targeting pandas in China,
                         eagles on
-                        an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a total
+                        an island near Los Angeles, alligators in Florida and gorillas in the Congo. These have a
+                        total
                         of
                         more than 1,500 mammals and reptiles.</p>
                 </div>
@@ -131,7 +137,7 @@
             <p class="donation__text">Even though the zoo has reopened, we need you now more than ever to help us deal
                 with these problems. Please consider a gift to our <a href="#" class="link">Emergency Support Fund </a>.
             </p>
-            <h3 class="donation__heading">How it works</h3>
+            <h3 class="donation__title">How it works</h3>
             <div class="layout-3-column">
                 <div class="step">
                     <div class="block-bordered">
@@ -268,16 +274,16 @@
                 <div class="footer__socials">
                     <ul class="socials">
                         <li class="socials__item">
-                            <a href="#"><span class="icon icon--facebook"></span>Facebook</a>
+                            <a href="#" class="link"><span class="icon icon--facebook"></span>Facebook</a>
                         </li>
                         <li class="socials__item">
-                            <a href="#"><span class="icon icon--twitter"></span>Twitter</a>
+                            <a href="#" class="link"><span class="icon icon--twitter"></span>Twitter</a>
                         </li>
                         <li class="socials__item">
-                            <a href="#"><span class="icon icon--inst"></span>Instagram</a>
+                            <a href="#" class="link"><span class="icon icon--inst"></span>Instagram</a>
                         </li>
                         <li class="socials__item">
-                            <a href="#"><span class="icon icon--youtube"></span>YouTube</a>
+                            <a href="#" class="link"><span class="icon icon--youtube"></span>YouTube</a>
                         </li>
                     </ul>
                 </div>
@@ -307,7 +313,6 @@
             </div>
         </div>
     </footer>
-    <script type="module" src="./script.js"> </script>
 </body>
 
 </html>
