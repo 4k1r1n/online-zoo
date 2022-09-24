@@ -1,7 +1,7 @@
 .preview {
     background-image: url("../assets/images/backgrounds/giant-panda.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center 60%;
     background-repeat: no-repeat;
 
     &__wrapper {
@@ -45,6 +45,6 @@
     }
 
     &__link-button {
-        margin-bottom: 100px;
+        margin-bottom: 92px;
     }
 }
