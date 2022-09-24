@@ -3,7 +3,7 @@
     background: $color-additional-gradient;
 
     &__wrapper {
-        padding: 44px 0 59px;
+        padding: 44px 60px 59px 99px;
         border-radius: 20px;
         background: $color-background;
         backdrop-filter: blur(2px);
@@ -24,17 +24,17 @@
     &__text {
         margin: 0 0 10px;
         @include font($height: 2.1rem, $weight: 500);
+        white-space: nowrap;
     }
 
     &__paragraph {
         margin: 0;
         @include font($height: 2.1rem, $weight: 400);
-        padding-right: 198px;
+        padding-right: 138px;
     }
 
     &__content {
         color: $color-text;
-        padding: 0 0 60px 99px;
     }
 
     &__link-button {
