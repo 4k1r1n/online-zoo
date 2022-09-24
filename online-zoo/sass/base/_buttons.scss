@@ -67,14 +67,4 @@
     border: 1px solid $color-default-button;
     border-radius: 5px;
     cursor: pointer;
-
-    &:active {
-        color: $color-active-buttons;
-        border-color: $color-active-buttons;
-    }
-
-    &:disabled {
-        color: $color-error;
-        border-color: $color-error;
-    }
 }

@@ -22,6 +22,26 @@
 
         &:hover {
             color: $color-link;
+
+            .social {
+                background-color: $color-active-buttons;
+            }
+        }
+    }
+
+    &--bordered {
+        position: relative;
+
+        &:hover {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                height: 1px;
+                width: 100%;
+                background: $color-active-buttons;
+            }
         }
     }
 

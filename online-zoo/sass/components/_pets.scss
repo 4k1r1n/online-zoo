@@ -41,7 +41,7 @@
             z-index: -1;
             opacity: 0;
             background-color: $color-transparent;
-            backdrop-filter: blur(1px);
+            backdrop-filter: blur(1.5px);
             transition: all .7s ease-in-out;
         }
 

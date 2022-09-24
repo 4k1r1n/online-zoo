@@ -15,9 +15,9 @@
     }
 }
 
-@mixin gradient-border($gradient, $width, $radius) {
+@mixin gradient-border($gradient, $width, $radius, $background-color: $color-light) {
     position: relative;
-    background: $color-light;
+    background: $background-color;
     border-radius: $radius;
     border: $width solid transparent;
     background-clip: padding-box;

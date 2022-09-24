@@ -27,39 +27,36 @@
         background: $color-primary;
         cursor: pointer;
         @extend %transition;
-        background-size: 300% 100%;
 
-        // overflow: hidden;
-
-        //     &::before {
-        //         content: "";
-        //         position: absolute;
-        //         top: 0;
-        //         left: 0;
-        //         width: 100%;
-        //         height: 100%;
-        //         background-color: $color-hover-buttons;
-        //         opacity: 0;
-        //         @extend %transition;
-        //         z-index: 0;
-        //     }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: $color-active-buttons;
+            // opacity: 0;
+            @extend %transition;
+            // z-index: 0;
+        }
 
         // &:hover {
         //     &::before {
         //         opacity: 1;
         //     }
         // }
-
-        &:hover {
-            @extend %transition;
-            background-position: 100% 0;
-            background-color: $color-hover-buttons;
-        }
     }
 
     &-square {
         width: 168px;
         height: 168px;
+    }
+
+    &-social {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background-color: $color-socials;
     }
 
     &--pay {
@@ -121,5 +118,29 @@
         width: 37px;
         height: 37px;
         background-image: url("../assets/images/testimonials/4.png");
+    }
+
+    &--facebook {
+        background-image: url("../assets/images/icons/facebook.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--twitter {
+        background-image: url("../assets/images/icons/twitter.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--inst {
+        background-image: url("../assets/images/icons/inst.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &--youtube {
+        background-image: url("../assets/images/icons/youtube.svg");
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
