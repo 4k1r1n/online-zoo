@@ -5,12 +5,16 @@
         width: 33px;
         height: 37px;
         background-image: url("../assets/images/icons/banana-bamboo_icon.svg");
+        opacity: 1;
+        transition: all .4s ease-in-out
     }
 
     &--carnivores {
         width: 48px;
         height: 38px;
         background-image: url("../assets/images/icons/meet-fish_icon.svg");
+        opacity: 1;
+        transition: all .4s ease-in-out
     }
 
     &-round {
@@ -22,8 +26,35 @@
         justify-content: center;
         background: $color-primary;
         cursor: pointer;
+        @extend %transition;
+        background-size: 300% 100%;
 
-        &:hover {}
+        // overflow: hidden;
+
+        //     &::before {
+        //         content: "";
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 100%;
+        //         background-color: $color-hover-buttons;
+        //         opacity: 0;
+        //         @extend %transition;
+        //         z-index: 0;
+        //     }
+
+        // &:hover {
+        //     &::before {
+        //         opacity: 1;
+        //     }
+        // }
+
+        &:hover {
+            @extend %transition;
+            background-position: 100% 0;
+            background-color: $color-hover-buttons;
+        }
     }
 
     &-square {
@@ -66,5 +97,29 @@
         height: 8px;
         transform: rotate(180deg);
         background-image: url("../assets/images/icons/arrow-slider.svg");
+    }
+
+    &--avatar-user01 {
+        width: 37px;
+        height: 37px;
+        background-image: url("../assets/images/icons/no-photo.svg");
+    }
+
+    &--avatar-user02 {
+        width: 37px;
+        height: 37px;
+        background-image: url("../assets/images/testimonials/2.png");
+    }
+
+    &--avatar-user03 {
+        width: 37px;
+        height: 37px;
+        background-image: url("../assets/images/testimonials/3.png");
+    }
+
+    &--avatar-user04 {
+        width: 37px;
+        height: 37px;
+        background-image: url("../assets/images/testimonials/4.png");
     }
 }
