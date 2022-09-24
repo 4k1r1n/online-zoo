@@ -1,5 +1,6 @@
 .link-button {
     display: inline-block;
+    position: relative;
     width: 298px;
     padding: 16px 0;
     @include font($weight: 500);
@@ -8,9 +9,25 @@
     color: $color-light;
     cursor: pointer;
     text-decoration: none;
-    z-index: 1;
-    @extend %transition;
-    background-size: 300% 100%;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-hover-buttons;
+        opacity: 0;
+        @extend %transition;
+        z-index: 0;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+    }
 
     &--gradiented {
         background-image: $color-primary;
@@ -29,9 +46,9 @@
     }
 
     &:hover {
-        @extend %transition;
-        background-position: 100% 0;
-        background-color: $color-hover-buttons;
+        &::before {
+            opacity: 1;
+        }
     }
 
     &:active {
