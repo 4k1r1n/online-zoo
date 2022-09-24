@@ -1,0 +1,122 @@
+.testimonials {
+    padding: 140px 0 180px;
+    background: url("../assets/images/icons/leav_foto.png") no-repeat right bottom -24%;
+
+    .heading {
+        margin: 0 0 40px;
+    }
+
+    &__wrapper {
+        padding-bottom: 12px;
+    }
+
+    &__scrollbar {
+        margin: auto;
+        width: 599px;
+        margin-bottom: 25px;
+    }
+}
+
+.row {
+    display: flex;
+    gap: 16px;
+}
+
+.testimonial {
+    padding: 11px 10px 19px 16px;
+    @include gradient-border($gradient: $color-border, $width: 2px, $radius: 20px);
+
+    &__header {
+        display: flex;
+        gap: 10px;
+        margin: 0 0 10px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__author {
+        @include font($height: 1.9rem);
+        margin: 0;
+        color: $color-dark;
+    }
+
+    &__location {
+        @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+        color: $color-text-location;
+        margin: 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $color-text-location;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            right: -12px;
+        }
+    }
+
+    &__date {
+        margin: 0;
+        @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+        color: $color-text-location;
+    }
+
+    &__text {
+        height: 309px;
+        margin: 0;
+        @include font($size: 1.5rem, $height: 1.8rem, $weight: 300);
+        color: $color-disabled-buttons;
+        overflow: hidden;
+
+        span {
+            display: block;
+        }
+    }
+}
+
+input[type=range] {
+    width: 100%;
+    height: 8px;
+    padding: 1px 0;
+    -webkit-appearance: none;
+
+    @include gradient-border($gradient: $color-border, $width: 0.5px, $radius: 5px);
+
+    &::-webkit-slider-runnable-track {
+        background: $color-background-slider;
+    }
+
+
+    &::-moz-range-track {
+        height: 8px;
+        @include gradient-border($gradient: $color-border, $width: 0.5px, $radius: 5px);
+        background: $color-background-slider;
+    }
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 115px;
+        height: 6px;
+        border-radius: 5px;
+        background: $color-additional;
+        cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 115px;
+        height: 6px;
+        border-radius: 5px;
+        border: none;
+        background: $color-additional;
+        cursor: pointer;
+    }
+}

@@ -15,23 +15,26 @@ $_white: #ffffff;
 $_black: #000000;
 
 $font-stack: 'Roboto', Verdana, sans-serif;
+
+// TODO: rename variables
 $color-primary: $_gradient-orange-bright;
 $color-additional-gradient: $_gradient-orange-faded;
 $color-background: $_white-frosted-glass;
 $color-additional: $_orange;
 $color-link: $_green;
-$color-overlay: rgba(0, 0, 0, 0.3);
+$color-overlay: rgba(51, 59, 65, .4);
 $color-text-selection: $_yellow;
 $color-error: $_red;
 $color-light: $_white;
 $color-dark: $_black;
-// переименовать 
+$color-background-slider: #F5F7F6;
 $color-text: $_black-blue;
 $color-default-button: $_black-blue;
 $color-border: $_gradient-pink;
 $color-testimonial-text: $_gradient-pink;
 $color-active-buttons: $_green;
 $color-disabled-buttons: $_gray;
+$color-text-location: $_gray-light;
 $color-background-button: $_gray-lighter;
 $color-hover-buttons: #E47209;
 $color-transparent: rgba(0, 0, 0, 0);
