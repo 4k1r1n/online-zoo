@@ -7,4 +7,6 @@
     row-gap: 20px;
 }
 
-.layout-4-column {}
+.layout-4-column {
+    @include columns($width: 23%);
+}
