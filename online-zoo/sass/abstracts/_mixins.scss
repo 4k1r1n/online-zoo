@@ -19,6 +19,8 @@
     position: relative;
     background: $color-light;
     border-radius: $radius;
+    border: $width solid transparent;
+    background-clip: padding-box;
 
     &:before {
         content: "";
