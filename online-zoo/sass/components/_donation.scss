@@ -1,9 +1,9 @@
 .donation {
-    padding: 65px 0 100px;
+    padding: 69px 0 99px;
     background: $color-additional-gradient;
 
     &__wrapper {
-        padding: 44px 60px 59px 99px;
+        padding: 41px 0 55px;
         border-radius: 20px;
         background: $color-background;
         backdrop-filter: blur(2px);
@@ -34,6 +34,7 @@
     }
 
     &__content {
+        padding: 0 59px 59px 99px;
         color: $color-text;
     }
 
@@ -47,6 +48,7 @@
 
     .link {
         border-bottom: 1px solid $color-additional;
+        padding-bottom: 4px;
 
         &:hover {
             border-bottom-color: $color-link;
@@ -66,9 +68,20 @@
 }
 
 .step {
+    position: relative;
     max-width: 168px;
 
     &__text {
         margin: 30px 0 0;
+    }
+
+    &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 69px;
+        height: 38px;
+        top: 25%;
+        right: -60%;
+        background: url("../assets/images/icons/arrow-1.svg") no-repeat;
     }
 }
