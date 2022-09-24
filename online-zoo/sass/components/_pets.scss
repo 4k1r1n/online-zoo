@@ -18,33 +18,82 @@
         width: 114%;
         top: 40%;
         right: -7%;
-        // right: 50%;
-        // transform: translate(43%, -50%);
     }
 }
 
 .pet {
-    cursor: pointer;
-
-    &__inner {
+    &__image-container {
+        cursor: pointer;
         overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        max-height: 366px;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            background-color: $color-transparent;
+            backdrop-filter: blur(1px);
+            transition: all .7s ease-in-out;
+        }
+
+        &:hover {
+            >* {
+                transform: scale(1.1);
+            }
+
+            ~.pet {
+                &__info {
+                    transition: all .7s ease-in-out;
+                    background-color: $color-additional;
+                    border-radius: 0 0 5px 5px;
+
+                    .icon--herbivorous {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    .icon--carnivores {
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                    >.pet__text {
+                        transform: translateY(-55px);
+                        color: $color-light;
+                    }
+                }
+            }
+
+            &::after {
+                transition: all .7s ease-in-out;
+                opacity: 1;
+                background-color: $color-overlay;
+                z-index: 0;
+            }
+        }
     }
 
     &__image {
         border-radius: 5px 5px 0 0;
         transition: all 1s;
         position: relative;
-
-        &:hover {
-            transform: scale(1.1);
-        }
+        pointer-events: auto;
     }
 
     &__info {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 12px 13px 16px;
+        padding: 5px 12px 14px 16px;
     }
 
     &__name {
@@ -57,7 +106,12 @@
         @include font ($size: 1.5rem, $height: 1.8rem, $weight: 300);
         margin: 0;
     }
+
+    &__text {
+        transition: all .7s ease-in-out;
+    }
 }
+
 
 .block-bordered {
     @include gradient-border($gradient: $_gradient-orange-bright, $width: 1px, $radius: 5px);
