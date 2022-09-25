@@ -418,7 +418,7 @@ ul {
   box-sizing: border-box;
 }
 
-.donate .donation .amount-bar__radiobutton::before, .donate .donation .amount-bar__radiobutton::after, .donate .donation .amount-bar__label, .about .donation .link--bordered::after, .social:active .icon-social, .social, .icon-round::before, .link, .link-button::before {
+.donate .donation .amount-form__radiobutton, .donate .donation .amount-bar__radiobutton::before, .donate .donation .amount-bar__radiobutton::after, .donate .donation .amount-bar__label, .about .donation .link--bordered::after, .social:active .icon-social, .social, .icon-round::before, .link, .link-button::before {
   transition: all 0.3s ease-out;
 }
 

@@ -299,6 +299,7 @@
                 border-radius: 50%;
                 border: solid 1px $color-additional;
                 cursor: pointer;
+                @extend %transition;
 
                 &:checked {
                     background-color: $color-active-buttons;
