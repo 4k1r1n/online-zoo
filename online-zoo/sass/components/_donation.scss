@@ -1,9 +1,7 @@
 .donation {
-    padding: 69px 0 99px;
     background: $color-additional-gradient;
 
     &__wrapper {
-        padding: 41px 0 55px;
         border-radius: 20px;
         background: $color-background;
         backdrop-filter: blur(2px);
@@ -11,20 +9,12 @@
 
     &__title {
         text-align: center;
-        margin: 0 0 30px;
         @include font($size: 4.8rem, $height: 5.8rem);
         color: $color-additional;
     }
 
     &__subtitle {
         @include font($size: 2.4rem, $height: 2.9rem);
-        margin: 0 0 40px;
-    }
-
-    &__text {
-        margin: 0 0 10px;
-        @include font($height: 2.1rem, $weight: 500);
-        white-space: nowrap;
     }
 
     &__paragraph {
@@ -42,14 +32,7 @@
         text-align: center;
     }
 
-    &__heading {
-        margin: 0 0 33px;
-    }
-
     .link {
-        border-bottom: 1px solid $color-additional;
-        padding-bottom: 4px;
-
         &:hover {
             border-bottom-color: $color-link;
         }
@@ -58,7 +41,6 @@
 
 .heading {
     @include font($size: 3.6rem, $height: 5.7rem);
-    text-align: center;
 }
 
 .steps-container {

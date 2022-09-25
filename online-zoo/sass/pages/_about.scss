@@ -1,0 +1,103 @@
+.about {
+    .preview {
+        background-image: url("../assets/images/backgrounds/giant-panda.jpg");
+        background-size: cover;
+        background-position: center 60%;
+        background-repeat: no-repeat;
+
+        &__wrapper {
+            display: flex;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 500px;
+            margin-left: auto;
+            gap: 60px;
+        }
+
+        &__title {
+            @include font($size: 10.6rem, $height: 8rem, $weight: 700);
+            text-align: center;
+            text-transform: uppercase;
+            color: $color-light;
+            margin: 86px 0 0;
+            position: relative;
+            z-index: 2;
+
+            &--word-colored {
+                color: $color-text-selection;
+            }
+
+            &::after {
+                content: "";
+                width: 465px;
+                height: 465px;
+                display: block;
+                border-radius: 50%;
+                background: $color-primary;
+                position: absolute;
+                bottom: 12px;
+                right: 22%;
+                z-index: -1;
+            }
+        }
+
+        &__link-button {
+            margin-bottom: 92px;
+        }
+    }
+
+    .donation {
+        padding: 69px 0 99px;
+
+        &__heading {
+            margin: 0 0 33px;
+            text-align: center;
+        }
+
+        &__wrapper {
+            padding: 41px 0 55px;
+        }
+
+        &__subtitle {
+            margin: 0 0 40px;
+        }
+
+        &__title {
+            margin: 0 0 30px;
+        }
+
+        &__text {
+            margin: 0 0 10px;
+            @include font($height: 2.1rem, $weight: 500);
+            white-space: nowrap;
+        }
+
+        &__link {
+            border-bottom: 1px solid $color-additional;
+            padding-bottom: 4px;
+        }
+
+        .link--bordered {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                height: 1px;
+                width: 100%;
+                background: $color-additional;
+                @extend %transition;
+            }
+
+            &:hover {
+                &::after {
+                    background: $color-active-buttons;
+                }
+            }
+        }
+    }
+}
