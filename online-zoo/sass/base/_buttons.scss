@@ -52,11 +52,17 @@
     }
 
     &:active {
-        background-color: $color-active-buttons;
+        &::before {
+            opacity: 1;
+            background-color: $color-active-buttons;
+        }
     }
 
     &:disabled {
-        background-color: $color-disabled-buttons;
+        &::before {
+            opacity: 1;
+            background-color: $color-disabled-buttons;
+        }
     }
 }
 

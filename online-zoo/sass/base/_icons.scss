@@ -42,7 +42,7 @@
             @extend %transition;
         }
 
-        &:hover {
+        &:active {
             &::before {
                 opacity: 1;
             }

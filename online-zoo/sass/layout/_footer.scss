@@ -24,6 +24,10 @@
         flex-direction: column;
         gap: 10px;
         margin-left: auto;
+
+        .link {
+            @include font($height: 2.1rem, $weight: 100);
+        }
     }
 
     &__navigation {

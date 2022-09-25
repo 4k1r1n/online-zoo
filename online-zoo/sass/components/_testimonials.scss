@@ -20,7 +20,8 @@
 
 .testimonial {
     padding: 11px 10px 19px 16px;
-    @include gradient-border($gradient: $color-border, $width: 2px, $radius: 20px);
+    @include gradient-border($gradient: $color-border, $width: 2px, $radius: 20px, $background-color: $_gray-lighter);
+    ;
 
     &__header {
         display: flex;
