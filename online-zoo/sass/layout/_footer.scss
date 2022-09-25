@@ -79,7 +79,7 @@
             border-color: $color-active-buttons;
         }
 
-        &:invalid~.button:focus {
+        &:invalid:focus~.button {
             color: $color-error;
             border-color: $color-error;
         }
