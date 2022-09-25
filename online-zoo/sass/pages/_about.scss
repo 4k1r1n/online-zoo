@@ -93,7 +93,7 @@
                 @extend %transition;
             }
 
-            &:hover {
+            &:active {
                 &::after {
                     background: $color-active-buttons;
                 }

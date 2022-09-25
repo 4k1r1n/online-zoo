@@ -84,7 +84,6 @@
             border-color: $color-error;
         }
 
-
         &:valid~.button {
             color: $color-active-buttons;
             border-color: $color-active-buttons;
@@ -98,7 +97,7 @@
     gap: 12px;
     @extend %transition;
 
-    &:hover {
+    &:active {
         color: $color-active-buttons;
 
         .icon-social {
