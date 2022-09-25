@@ -1,0 +1,105 @@
+.footer {
+    background: $color-dark;
+    backdrop-filter: blur(2px);
+    padding: 41px 0 50px;
+    color: $color-light;
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 34px;
+    }
+
+    &__link-button {
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__copyright {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-left: auto;
+    }
+
+    &__navigation {
+        margin: 0 20px 0 auto;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-right: auto;
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &__title {
+        margin: 0;
+    }
+
+    &__row {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__input {
+        width: 228px;
+        outline: none;
+        padding: 10px 7px 10px 10px;
+        border: solid 0.7px transparent;
+        border-radius: 2px;
+        background-image: linear-gradient($color-dark, $color-dark), $_gradient-orange-bright;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+
+        &::placeholder {
+            @include font();
+            color: $color-text-location;
+        }
+
+        &:invalid:focus {
+            border-color: $color-error;
+        }
+
+        &:valid:focus {
+            border-color: $color-active-buttons;
+        }
+
+        &:invalid~.button:focus {
+            color: $color-error;
+            border-color: $color-error;
+        }
+
+
+        &:valid~.button {
+            color: $color-active-buttons;
+            border-color: $color-active-buttons;
+        }
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    @extend %transition;
+
+    &:hover {
+        color: $color-active-buttons;
+
+        .icon-social {
+            @extend %transition;
+            background-color: $color-active-buttons;
+        }
+    }
+}

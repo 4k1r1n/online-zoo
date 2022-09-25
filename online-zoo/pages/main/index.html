@@ -5,23 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetStory Online</title>
+    <title>PetStory online</title>
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.ico">
     <link rel="stylesheet" href="../../sass/main.css">
 </head>
 
-<body>
+<body class="about">
     <header class="header">
         <div class="wrapper header__wrapper">
-            <div class="header__logo">
-                <a href="./index.html" class="logo">
+            <div class="logo-container">
+                <a href="../main/index.html" class="logo">
                     <h1 class="logo__title">PetStory online</h1>
                 </a>
             </div>
             <nav class="header__navigation">
                 <ul class="navigation">
                     <li class="navigation__item">
-                        <a href="./index.html" class="link link--gradient" data-active="true">About</a>
+                        <a href="../main/index.html" class="link link--gradient" data-active="true">About</a>
                     </li>
                     <li class="navigation__item">
                         <a href="#" class="link link--gradient">Map</a>
@@ -43,7 +43,7 @@
             </div>
         </div>
     </header>
-    <section class="preview">
+    <div class="preview">
         <div class="wrapper preview__wrapper">
             <div class="preview__content">
                 <p class="preview__title">Watch your <span class="preview__title--word-colored">favorite</span> animal
@@ -54,8 +54,8 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="backstage">
+    </div>
+    <div class="backstage">
         <div class="wrapper">
             <div class="layout-2-column">
                 <img src="../../assets/images/backstage/bamboo-cap.jpg" alt="Man in bamboo hat" class="backstage__img">
@@ -80,11 +80,11 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="pets">
+    </div>
+    <div class="pets">
         <div class="wrapper pets__wrapper">
             <div class="layout-3-column">
-                <article class="pet block-bordered">
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/1.jpg" alt="Pandas" class="pet__image">
                     </div>
@@ -95,8 +95,8 @@
                         </div>
                         <span class="icon icon--herbivorous"></span>
                     </div>
-                </article>
-                <article class="pet block-bordered">
+                </div>
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/2.jpg" alt="Eagle" class="pet__image">
                     </div>
@@ -107,8 +107,8 @@
                         </div>
                         <span class="icon icon--carnivores"></span>
                     </div>
-                </article>
-                <article class="pet block-bordered">
+                </div>
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/3.jpg" alt="Gorilla" class="pet__image">
                     </div>
@@ -119,8 +119,8 @@
                         </div>
                         <span class="icon icon--herbivorous"></span>
                     </div>
-                </article>
-                <article class="pet block-bordered">
+                </div>
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/4.jpg" alt="Two-toed Sloth" class="pet__image">
                     </div>
@@ -131,8 +131,8 @@
                         </div>
                         <span class="icon icon--herbivorous"></span>
                     </div>
-                </article>
-                <article class="pet block-bordered">
+                </div>
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/5.jpg" alt="Cheetahs" class="pet__image">
                     </div>
@@ -143,8 +143,8 @@
                         </div>
                         <span class="icon icon--carnivores"></span>
                     </div>
-                </article>
-                <article class="pet block-bordered">
+                </div>
+                <div class="pet block-bordered">
                     <div class="pet__image-container">
                         <img src="../../assets/images/pets/6.jpg" alt="Penguin" class="pet__image">
                     </div>
@@ -155,7 +155,7 @@
                         </div>
                         <span class="icon icon--carnivores"></span>
                     </div>
-                </article>
+                </div>
             </div>
             <div class="pets__arrows">
                 <span class="icon-round">
@@ -170,8 +170,8 @@
                         class="link-button__text">choose your favorite</span></a>
             </div>
         </div>
-    </section>
-    <section class="donation">
+    </div>
+    <div class="donation">
         <div class="wrapper donation__wrapper">
             <h2 class="donation__title">Pick and feed a friend</h2>
             <div class="donation__content">
@@ -217,8 +217,8 @@
                         class="link-button__text">Feed a friend now</span></a>
             </div>
         </div>
-    </section>
-    <section class="testimonials">
+    </div>
+    <div class="testimonials">
         <div class="wrapper">
             <h4 class="testimonials__heading heading">Testimonials</h4>
             <div class="layout-4-column testimonials__wrapper">
@@ -227,7 +227,7 @@
                         <span class="icon icon--avatar-user01"></span>
                         <div class="testimonial__info">
                             <p class="testimonial__author">Michael John </p>
-                            <div class="row">
+                            <div class="testimonial__row">
                                 <p class="testimonial__location">Local Austria</p>
                                 <p class="testimonial__date">Today</p>
                             </div>
@@ -249,7 +249,7 @@
                         <span class="icon icon--avatar-user02"></span>
                         <div class="testimonial__info">
                             <p class="testimonial__author">Oskar Samborsky</p>
-                            <div class="row">
+                            <div class="testimonial__row">
                                 <p class="testimonial__location">Local Austria</p>
                                 <p class="testimonial__date">Yesterday</p>
                             </div>
@@ -276,7 +276,7 @@
                         <span class="icon icon--avatar-user03"></span>
                         <div class="testimonial__info">
                             <p class="testimonial__author">Fredericka Michelin</p>
-                            <div class="row">
+                            <div class="testimonial__row">
                                 <p class="testimonial__location">Local Austria</p>
                                 <p class="testimonial__date">Yesterday</p>
                             </div>
@@ -301,7 +301,7 @@
                         <span class="icon icon--avatar-user04"></span>
                         <div class="testimonial__info">
                             <p class="testimonial__author">Mila Riksha</p>
-                            <div class="row">
+                            <div class="testimonial__row">
                                 <p class="testimonial__location">Local Austria</p>
                                 <p class="testimonial__date">Yesterday</p>
                             </div>
@@ -330,21 +330,22 @@
                         class="link-button__text">leave feedback</span></a>
             </div>
         </div>
-    </section>
+    </div>
     <footer class="footer">
         <div class="wrapper">
             <div class="footer__row">
-                <div class="footer__logo">
-                    <a href="./index.html" class="logo">
+                <div class="logo-container">
+                    <a href="../main/index.html" class="logo">
                         <h1 class="logo__title">PetStory online</h1>
                     </a>
                 </div>
-                <div class="contact-us">
-                    <p class="contact-us__title subtitle">Subscribe to our news</p>
-                    <div class="contact-us__form">
-                        <form action method="POST">
-                            <div class="layout-2-column">
-                                <input type="email" name="email" placeholder="Enter your email">
+                <div class="subscribe">
+                    <p class="subscribe__title subtitle">Subscribe to our news</p>
+                    <div class="subscribe__form">
+                        <form action>
+                            <div class="subscribe__row">
+                                <input type="email" name="email" placeholder="Enter your email" required
+                                    class="subscribe__input">
                                 <button type="submit" class="button">Submit</button>
                             </div>
                         </form>
@@ -356,27 +357,22 @@
                     class="link-button link-button--gradiented link-button--semi-rounded"><span
                         class="link-button__text">donate for volunteers</span></a>
             </div>
-            <div class="footer__row">
+            <div class="footer__container">
                 <div class="footer__socials">
-                    <ul class="socials">
-                        <li class="socials__item">
-                            <a href="#" class="link link--colored"><span class="icon icon--facebook"></span>Facebook</a>
-                        </li>
-                        <li class="socials__item">
-                            <a href="#" class="link link--colored"><span class="icon icon--twitter"></span>Twitter</a>
-                        </li>
-                        <li class="socials__item">
-                            <a href="#" class="link link--colored"><span class="icon icon--inst"></span>Instagram</a>
-                        </li>
-                        <li class="socials__item">
-                            <a href="#" class="link link--colored"><span class="icon icon--youtube"></span>YouTube</a>
-                        </li>
-                    </ul>
+                    <a href="https://facebook.com/" class="social link link--colored"><span
+                            class="icon icon-social icon--facebook"></span><span
+                            class="social__name">Facebook</span></a>
+                    <a href="https://twitter.com/" class="social link link--colored"><span
+                            class="icon icon-social icon--twitter"></span><span class="social__name">Twitter</span></a>
+                    <a href="https://instagram.com/" class="social link link--colored"><span
+                            class="icon icon-social icon--inst"></span><span class="social__name">Instagram</span></a>
+                    <a href="https://youtube.com/" class="social link link--colored"><span
+                            class="icon icon-social icon--youtube"></span><span class="social__name">YouTube</span></a>
                 </div>
                 <nav class="footer__navigation">
                     <ul class="navigation">
                         <li class="navigation__item">
-                            <a href="./index.html" class="link link--gradient">About</a>
+                            <a href="../main/index.html" class="link link--gradient" data-active="true">About</a>
                         </li>
                         <li class="navigation__item">
                             <a href="#" class="link link--gradient">Map</a>
@@ -385,16 +381,13 @@
                             <a href="#" class="link link--gradient">Zoos</a>
                         </li>
                         <li class="navigation__item">
-                            <a href="../donate/index.html" class="link link--gradient">Donate</a>
-                        </li>
-                        <li class="navigation__item">
                             <a href="#" class="link link--gradient">Contact us</a>
                         </li>
                     </ul>
                 </nav>
                 <div class="footer__copyright">
-                    <a href="#" class="link link--colored">Designed by Alisa Samborskaya</a>
-                    <a href="#" class="link link--colored">©RSSchool & ©Yem Digital 2021</a>
+                    <a href="#" class="link link--colored link--bordered">Designed by Alisa Samborskaya</a>
+                    <a href="#" class="link link--colored link--bordered">©RSSchool & ©Yem Digital 2021</a>
                 </div>
             </div>
         </div>
