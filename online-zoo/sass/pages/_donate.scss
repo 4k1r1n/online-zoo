@@ -1,0 +1,310 @@
+.donate {
+    .preview {
+        height: 386px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .donation {
+        color: $color-text;
+        padding: 40px 0 178px;
+
+        &__heading {
+            margin: 0;
+            color: $color-light;
+
+            &--colored {
+                color: $color-additional;
+                margin: 0 0 56px;
+            }
+        }
+
+        &__text {
+            margin: 0 0 40px;
+            @include font($height: 2.2rem, $weight: 500);
+
+            &--colored {
+                color: $color-light;
+                text-align: initial;
+            }
+        }
+
+        &__wrapper {
+            padding: 40px 92px 62px;
+        }
+
+        &__subtitle {
+            margin: 0 0 55px;
+        }
+
+        &__title {
+            margin: 0 0 20px;
+        }
+
+        &__link-button {
+            margin-bottom: 25px;
+        }
+
+        &__link {
+            text-align: center;
+        }
+
+        &__amount-bar {
+            margin-bottom: 98px;
+
+            &-title {
+                @include font($height: 2.2rem, $weight: 400);
+                margin: 0 0 17px;
+            }
+        }
+
+        .amount-bar {
+            position: relative;
+            width: 100%;
+            height: 27px;
+            background: $color-amount-bar;
+            border-radius: 2px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 93%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: $color-amount-bar-track;
+            }
+
+            &__item {
+                position: relative;
+
+                >.amount-bar__radiobutton {
+                    &:checked {
+                        &::after {
+                            outline: 2px solid $color-additional;
+                            outline-offset: 4px;
+                        }
+
+                        &::before {
+                            outline: 2px solid $color-additional;
+                            outline-offset: 12px;
+                        }
+
+                        &~.amount-bar__label {
+                            color: $color-additional;
+                        }
+                    }
+
+                    &:hover {
+                        &::after {
+                            outline: 2px solid $color-additional;
+                            outline-offset: 4px;
+                        }
+
+                        &::before {
+                            outline: 2px solid $color-additional;
+                            outline-offset: 12px;
+                        }
+
+                        &~.amount-bar__label {
+                            color: $color-additional;
+                        }
+                    }
+                }
+            }
+
+            &__track {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            &__label {
+                position: absolute;
+                padding-top: 12px;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+                @include font($weight: 500, $size: 2.6rem, $height: 3.6rem);
+                text-transform: uppercase;
+                pointer-events: none;
+                @extend %transition;
+            }
+
+            &__radiobutton {
+                -webkit-appearance: none;
+                appearance: none;
+                display: inline-block;
+                position: relative;
+                width: 60px;
+                height: 100%;
+                cursor: pointer;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 10px;
+                    height: 10px;
+                    background: $color-text-selection;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1;
+                    outline: 2px solid transparent;
+                    outline-offset: 0;
+                    @extend %transition;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1;
+                    outline: 2px solid transparent;
+                    outline-offset: 0;
+                    @extend %transition;
+                }
+            }
+        }
+
+        &__promo {
+            display: flex;
+            padding-left: 215px;
+            position: relative;
+            margin-bottom: 55px;
+        }
+
+        &__promo-text {
+            color: $color-text;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 112px 89px 0 0;
+            gap: 10px;
+            margin: 0;
+
+            &::after {
+                content: "";
+                width: 14px;
+                height: 14px;
+                position: absolute;
+                background-image: url("../assets/images/icons/x_icon.svg");
+                right: 59%;
+                bottom: 40%;
+            }
+
+            &--number {
+                @include font($weight: 500, $size: 7.2rem, $height: 5.8rem);
+                color: $color-dark;
+            }
+        }
+
+        &__amount-form {
+            margin-bottom: 30px;
+        }
+
+        .amount-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 23px;
+
+            &__number {
+                position: relative;
+            }
+
+            &__input {
+                -moz-appearance: textfield;
+                width: 268px;
+                padding: 17px 10px 17px 9px;
+                outline: none;
+                border: solid 1px $color-amount-form-placeholder;
+                border-radius: 2px;
+                background: $color-transparent;
+                color: $color-amount-form-placeholder;
+
+                &~i {
+                    position: absolute;
+                    display: block;
+                    pointer-events: none;
+                    top: 50%;
+                    right: 10px;
+                    color: $color-amount-form-placeholder;
+                    transform: translateY(-50%);
+                    @include font($weight: 700, $size: 2.2rem, $height: 5.8rem);
+                }
+
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                &::placeholder {
+                    @include font();
+                    color: $color-amount-form-placeholder;
+                }
+
+                &:invalid:focus {
+                    color: $color-error;
+                    border-color: $color-error;
+                }
+
+                &:invalid:focus~i {
+                    color: $color-error;
+                }
+
+                &:valid:focus~i {
+                    color: $color-active-buttons;
+                }
+
+                &:valid:focus {
+                    color: $color-active-buttons;
+                    border-color: $color-active-buttons;
+                }
+            }
+
+            &__radiobuttons {
+                display: flex;
+                gap: 50px;
+                padding-right: 25px;
+            }
+
+            &__radiobutton-container {
+                display: flex;
+                gap: 10px;
+            }
+
+            &__radiobutton {
+                -webkit-appearance: none;
+                appearance: none;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: solid 1px $color-additional;
+                cursor: pointer;
+
+                &:checked {
+                    background-color: $color-active-buttons;
+                    border-color: $color-active-buttons;
+                }
+            }
+        }
+    }
+}
