@@ -514,7 +514,7 @@ h3 {
 .button {
   padding: 10px 39px;
   color: #333B41;
-  background-image: #F1F3F2;
+  background: #F1F3F2;
   border: 1px solid #333B41;
   border-radius: 5px;
   cursor: pointer;
