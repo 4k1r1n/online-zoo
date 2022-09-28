@@ -587,6 +587,8 @@ h3 {
 }
 .link[data-active] {
   color: rgba(0, 0, 0, 0);
+  cursor: default;
+  pointer-events: none;
 }
 
 .icon {

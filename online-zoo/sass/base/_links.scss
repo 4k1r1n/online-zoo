@@ -47,5 +47,7 @@
 
     &[data-active] {
         color: $color-transparent;
+        cursor: default;
+        pointer-events: none;
     }
 }
