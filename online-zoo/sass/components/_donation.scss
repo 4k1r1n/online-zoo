@@ -21,11 +21,24 @@
         margin: 0;
         @include font($height: 2.1rem, $weight: 400);
         padding-right: 138px;
+
+        @include media-small-desktop {
+            margin-bottom: 40px;
+            padding: 0;
+        }
+
+        @include media-large-tablet {
+            margin-bottom: 30px;
+        }
     }
 
     &__content {
         padding: 0 59px 59px 99px;
         color: $color-text;
+
+        @include media-small-desktop {
+            padding: 0;
+        }
     }
 
     &__link-button {
@@ -41,20 +54,42 @@
 
 .heading {
     @include font($size: 3.6rem, $height: 5.7rem);
+    color: $color-text;
 }
 
 .steps-container {
     max-width: 764px;
     padding-bottom: 60px;
     margin: auto;
+
+    @include media-small-desktop {
+        padding-bottom: 70px;
+    }
+
+    @include media-large-tablet {
+        padding-bottom: 40px;
+    }
+
+    @include media-small-tablet {
+        padding: 0 66px 30px;
+    }
 }
 
 .step {
     position: relative;
     max-width: 168px;
 
+    @include media-small-tablet {
+        max-width: 100%;
+    }
+
     &__text {
         margin: 30px 0 0;
+        color: $color-text;
+
+        @include media-small-tablet {
+            margin: 10px 0 0;
+        }
     }
 
     &:not(:last-child)::after {
@@ -65,5 +100,24 @@
         top: 25%;
         right: -60%;
         background: url("../assets/images/icons/arrow-1.svg") no-repeat;
+
+        @include media-large-tablet {
+            width: 95px;
+            top: -18px;
+            right: -70%;
+            background: url("../assets/images/icons/arrow-2.svg") no-repeat;
+            z-index: 1;
+        }
+
+        @include media-tablet {
+            right: -40%;
+        }
+
+        @include media-small-tablet {
+            transform: rotate(90deg);
+            top: 90%;
+            left: 80%;
+            right: 0;
+        }
     }
 }

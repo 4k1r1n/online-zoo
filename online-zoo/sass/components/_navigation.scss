@@ -4,7 +4,27 @@
     gap: 58px;
     margin: 0;
 
+    @include media-small-desktop {
+        gap: 48px;
+    }
+
+    @include media-large-tablet {
+        gap: 37px;
+    }
+
+    @include media-small-tablet {
+        gap: 30px;
+    }
+
     &__item {
         list-style: none;
+    }
+}
+
+.header {
+    .navigation {
+        @include media-tablet {
+            display: none;
+        }
     }
 }

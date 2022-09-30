@@ -6,7 +6,14 @@
         height: 37px;
         background-image: url("../assets/images/icons/banana-bamboo_icon.svg");
         opacity: 1;
-        transition: all .4s ease-in-out
+        transition: all .4s ease-in-out;
+
+        @include media-large-tablet {
+            width: 26px;
+            height: 29px;
+            background-position: center;
+            background-size: 26px 29px;
+        }
     }
 
     &--carnivores {
@@ -14,7 +21,14 @@
         height: 38px;
         background-image: url("../assets/images/icons/meet-fish_icon.svg");
         opacity: 1;
-        transition: all .4s ease-in-out
+        transition: all .4s ease-in-out;
+
+        @include media-large-tablet {
+            width: 38px;
+            height: 30px;
+            background-size: 38px 30px;
+            background-position: center;
+        }
     }
 
     &-round {
@@ -52,6 +66,10 @@
     &-square {
         width: 168px;
         height: 168px;
+
+        @include media-small-tablet {
+            margin: auto
+        }
     }
 
     &-social {

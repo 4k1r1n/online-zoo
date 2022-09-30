@@ -28,3 +28,55 @@
         }
     }
 }
+
+.header {
+    .logo-container {
+        @include media-large-tablet {
+            border: none;
+            width: 47px;
+            height: 29px;
+        }
+    }
+
+    .logo {
+        &__title {
+            @include media-large-tablet {
+                @include font($size: 1.2rem, $height: 1.5rem);
+                padding: 0;
+            }
+
+            &::after {
+                @include media-large-tablet {
+                    left: 7px;
+                    height: 14px;
+                    width: 5px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    .logo-container {
+        @include media-small-tablet {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .logo {
+        &__title {
+            @include media-small-tablet {
+                @include font($size: 1.9rem, $height: 2.3rem);
+                padding: 0;
+            }
+
+            &::after {
+                @include media-small-tablet {
+                    left: 54%;
+                }
+            }
+        }
+    }
+}

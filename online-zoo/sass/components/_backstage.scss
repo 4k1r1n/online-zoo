@@ -1,8 +1,38 @@
 .backstage {
-    padding: 140px 0 180px 0;
+    padding: 140px 0 180px;
     color: $color-text;
-    background: url("../assets/images/icons/flower_foto1.png") no-repeat right top 12px;
+    background: url("../assets/images/backgrounds/flower_foto.png") no-repeat right top 12px;
     backdrop-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @include media-small-desktop {
+        background: none;
+        padding: 109px 0 139px;
+    }
+
+    @include media-large-tablet {
+        background: url("../assets/images/backgrounds/flower_foto.png") no-repeat right -35px top -15px;
+        background-size: contain;
+        padding: 60px 0 80px;
+    }
+
+    @include media-small-tablet {
+        background: url("../assets/images/backgrounds/flower_foto.png") no-repeat right -40px top 40px;
+        background-size: 22%;
+        padding: 104px 0 40px;
+    }
+
+    &__image {
+        @include media-small-desktop {
+            width: 455px;
+            height: 408px;
+            object-position: -80px;
+            object-fit: cover;
+        }
+
+        @include media-large-tablet {
+            display: none;
+        }
+    }
 
     &__content {
         display: flex;
@@ -11,20 +41,49 @@
 
     &__header {
         margin-bottom: 54px;
+
+        @include media-large-tablet {
+            margin-bottom: 30px;
+        }
+
+        @include media-small-tablet {
+            margin-bottom: 20px;
+        }
     }
 
     &__title {
         @include font($size: 4.8rem, $height: 5.8rem);
         margin: 0 0 20px;
+
+        @include media-small-desktop {
+            margin: 0 0 14px;
+        }
+
+        @include media-large-tablet {
+            margin: 0 0 20px;
+        }
+
+        @include media-small-tablet {
+            @include font($size: 2.4rem, $height: 2.9rem);
+            margin: 0 0 10px;
+        }
     }
 
     &__text {
-        @include font($height: 2.1rem);
+        @include font($height: 2.2rem);
         margin: 0;
     }
 
     &__subtitle {
         margin: 0 0 34px;
+
+        @include media-large-tablet {
+            margin-bottom: 20px;
+        }
+
+        @include media-small-tablet {
+            margin-bottom: 10px;
+        }
     }
 }
 

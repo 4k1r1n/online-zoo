@@ -3,14 +3,31 @@
     backdrop-filter: blur(2px);
     padding: 14px 0;
     color: $color-light;
+    position: relative;
+    z-index: 2;
+
+    @include media-tablet {
+        padding: 3px 0;
+        position: sticky;
+        top: 0;
+    }
 
     &__wrapper {
         display: flex;
         align-items: center;
         gap: 63px;
+
+        @include media-large-tablet {
+            @include font($size: 1.5rem, $height: 1.5rem);
+            justify-content: space-between;
+        }
     }
 
     &__copyright {
         margin-left: auto;
+
+        @include media-large-tablet {
+            display: none;
+        }
     }
 }

@@ -1,27 +1,95 @@
 .testimonials {
     padding: 140px 0 172px;
-    background: url("../assets/images/icons/leav_foto.png") no-repeat right bottom -26%;
+    background: url("../assets/images/backgrounds/leav_foto.png") no-repeat right bottom -26%;
+
+    @include media-small-desktop {
+        padding: 98px 0 133px;
+        background: url("../assets/images/backgrounds/leav_foto.png") no-repeat right -10px bottom -17%;
+        background-size: 20%;
+    }
+
+    @include media-large-tablet {
+        padding: 60px 0 74px;
+    }
+
+    @include media-small-tablet {
+        padding: 30px 0 55px;
+        background: url("../assets/images/backgrounds/leav_foto-1.png") no-repeat right bottom -6%;
+    }
 
     .heading {
         margin: 0 0 40px;
         text-align: center;
+
+        @include media-small-desktop {
+            margin-bottom: 20px;
+        }
+
+        @include media-small-tablet {
+            @include font($size: 2.4rem, $height: 2.9rem);
+        }
     }
 
     &__wrapper {
         padding-bottom: 12px;
+
+        @include media-large-tablet {
+            padding-bottom: 40px;
+        }
+
+        @include media-small-tablet {
+            padding-bottom: 30px;
+        }
     }
 
     &__scrollbar {
         margin: auto;
         width: 599px;
         margin-bottom: 25px;
+
+        @include media-small-desktop {
+            margin-bottom: 49px;
+            width: 390px;
+        }
+
+        @include media-large-tablet {
+            display: none;
+        }
+    }
+
+    &__link-button {
+        @include media-large-tablet {
+            text-align: center;
+        }
+    }
+
+    .link-button {
+        @include media-large-tablet {
+            width: 240px;
+        }
     }
 }
 
 .testimonial {
     padding: 11px 10px 19px 16px;
     @include gradient-border($gradient: $color-border, $width: 2px, $radius: 20px, $background-color: $_gray-lighter);
-    ;
+
+    @include media-small-desktop {
+        padding-right: 17px;
+
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    @include media-large-tablet {
+        height: 109px;
+        padding: 15px 17px 12px 12px;
+    }
+
+    @include media-small-tablet {
+        padding-top: 11px
+    }
 
     &__header {
         display: flex;
@@ -78,6 +146,10 @@
         color: $color-disabled-buttons;
         overflow: hidden;
 
+        @include media-large-tablet {
+            height: 35px;
+        }
+
         span {
             display: block;
         }
@@ -109,6 +181,10 @@
         border-radius: 5px;
         background: $color-additional;
         cursor: pointer;
+
+        @include media-small-desktop {
+            width: 75px;
+        }
     }
 
     &::-moz-range-thumb {

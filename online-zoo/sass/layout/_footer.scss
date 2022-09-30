@@ -1,22 +1,77 @@
 .footer {
     background: $color-dark;
     backdrop-filter: blur(2px);
-    padding: 41px 0 50px;
+    padding: 41px 0 48px;
     color: $color-light;
+    position: relative;
+
+    @include media-large-tablet {
+        padding: 13px 0 18px;
+    }
+
+    @include media-small-tablet {
+        padding: 20px 0 22px;
+    }
+
+    &__wrapper {
+        @include media-small-desktop {
+            padding-left: 45px;
+            padding-right: 25px;
+        }
+
+        @include media-large-tablet {
+            padding: 0 20px 0;
+        }
+
+        @include media-small-tablet {
+            padding: 0;
+        }
+    }
 
     &__row {
         display: flex;
         justify-content: space-between;
         margin-bottom: 34px;
+
+        @include media-small-desktop {
+            padding-right: 25px;
+        }
+
+        @include media-small-tablet {
+            margin-bottom: 86px;
+            padding: 0;
+        }
     }
 
     &__link-button {
         margin-bottom: 40px;
+
+        @include media-small-desktop {
+            margin-bottom: 35px;
+        }
+
+        @include media-large-tablet {
+            margin-bottom: 60px;
+        }
+
+        @include media-small-tablet {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        @include media-small-tablet {
+            margin-bottom: 25px;
+        }
     }
 
     &__container {
         display: flex;
         align-items: flex-end;
+        row-gap: 30px;
+
+        @include media-small-tablet {
+            flex-wrap: wrap-reverse;
+        }
     }
 
     &__copyright {
@@ -24,14 +79,32 @@
         flex-direction: column;
         gap: 10px;
         margin-left: auto;
+        padding-left: 15px;
+
+        @include media-small-desktop {
+            padding-right: 10px;
+        }
 
         .link {
-            @include font($height: 2.1rem, $weight: 100);
+            @include font($height: 1.8rem, $weight: 100, $size: 15px);
         }
     }
 
     &__navigation {
-        margin: 0 20px 0 auto;
+        margin: 0 10px 0 auto;
+
+        @include media-small-desktop {
+            padding-left: 40px;
+        }
+
+        @include media-large-tablet {
+            margin: 0;
+            padding: 0;
+        }
+
+        @include media-small-tablet {
+            padding-left: 20px;
+        }
     }
 
     &__socials {
@@ -39,10 +112,30 @@
         flex-direction: column;
         gap: 10px;
         margin-right: auto;
+
+        @include media-large-tablet {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            gap: 20px;
+        }
+
+        @include media-small-tablet {
+            flex-direction: row;
+            gap: 30px;
+            right: 0;
+            left: 0;
+            justify-content: center;
+            top: 22%;
+        }
     }
 }
 
 .subscribe {
+    @include media-large-tablet {
+        display: none;
+    }
+
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -103,6 +196,12 @@
         .icon-social {
             @extend %transition;
             background-color: $color-active-buttons;
+        }
+    }
+
+    &__name {
+        @include media-large-tablet {
+            display: none;
         }
     }
 }

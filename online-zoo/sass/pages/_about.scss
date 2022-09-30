@@ -5,8 +5,13 @@
         background-position: center 60%;
         background-repeat: no-repeat;
 
+        @include media-small-desktop {
+            background-size: 120%;
+        }
+
         &__wrapper {
             display: flex;
+            position: relative;
         }
 
         &__content {
@@ -16,6 +21,18 @@
             max-width: 500px;
             margin-left: auto;
             gap: 60px;
+
+            @include media-small-desktop {
+                gap: 40px;
+            }
+
+            @include media-large-tablet {
+                max-width: 250px;
+            }
+
+            @include media-small-tablet {
+                max-width: 130px;
+            }
         }
 
         &__title {
@@ -25,7 +42,23 @@
             color: $color-light;
             margin: 86px 0 0;
             position: relative;
-            z-index: 2;
+            z-index: 1;
+
+            @include media-small-desktop {
+                margin: 43px 0 0;
+                @include font($size: 8.5rem, $height: 6.4rem, $weight: 700);
+            }
+
+            @include media-large-tablet {
+                margin: 48px 0 85px;
+                @include font($size: 5.4rem, $height: 4.1rem, $weight: 700);
+            }
+
+
+            @include media-small-tablet {
+                margin: 41px 0 40px;
+                @include font($size: 2.8rem, $height: 2.1rem, $weight: 700);
+            }
 
             &--word-colored {
                 color: $color-text-selection;
@@ -42,38 +75,166 @@
                 bottom: 12px;
                 right: 22%;
                 z-index: -1;
+
+                @include media-small-desktop {
+                    width: 367px;
+                    height: 367px;
+                    bottom: 8px;
+                    right: 30%;
+                }
+
+                @include media-large-tablet {
+                    width: 237px;
+                    height: 237px;
+                    right: 20%;
+                }
+
+                @include media-small-tablet {
+                    width: 119px;
+                    height: 119px;
+                }
             }
         }
 
         &__link-button {
             margin-bottom: 92px;
+
+            @include media-small-desktop {
+                margin-bottom: 40px;
+            }
+
+            @include media-large-tablet {
+                position: absolute;
+                left: 20px;
+                bottom: 0;
+                margin-bottom: 35px;
+            }
+
+            @include media-small-tablet {
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: -62%;
+            }
+        }
+    }
+
+    .steps-container {
+        @include media-small-tablet {
+            row-gap: 40px;
         }
     }
 
     .donation {
         padding: 69px 0 99px;
 
+        @include media-small-desktop {
+            padding: 30px 30px 50px;
+        }
+
+        @include media-large-tablet {
+            padding: 20px 10px;
+        }
+
+        @include media-tablet {
+            padding: 20px 0;
+        }
+
+        @include media-small-tablet {
+            padding: 20px 10px;
+        }
+
         &__heading {
             margin: 0 0 33px;
             text-align: center;
+
+            @include media-large-tablet {
+                margin-bottom: 11px;
+            }
+
+            @include media-small-tablet {
+                @include font($size: 2.4rem, $height: 2.9rem);
+                margin-bottom: 20px;
+            }
         }
 
         &__wrapper {
             padding: 41px 0 55px;
+
+            @include media-small-desktop {
+                padding: 30px 49px 45px 48px;
+            }
+
+            @include media-large-tablet {
+                padding: 20px 20px 40px;
+            }
+
+            @include media-tablet {
+                padding: 10px 20px 55px;
+            }
+
+            @include media-small-tablet {
+                padding: 20px 0 33px;
+            }
         }
 
         &__subtitle {
             margin: 0 0 40px;
+
+            @include media-small-desktop {
+                margin-bottom: 20px;
+            }
+
+            @include media-large-tablet {
+                @include font($size: 2.2rem, $height: 2.6rem);
+            }
+
+            @include media-small-tablet {
+                @include font($size: 1.8rem, $height: 2.2rem);
+                text-align: center;
+            }
         }
 
         &__title {
             margin: 0 0 30px;
+
+            @include media-small-desktop {
+                margin-bottom: 22px;
+            }
+
+            @include media-large-tablet {
+                @include font($size: 4.2rem, $height: 5rem);
+                margin-bottom: 20px;
+            }
+
+            @include media-small-tablet {
+                @include font($size: 2.4rem, $height: 2.9rem);
+                margin-bottom: 10px;
+            }
         }
 
         &__text {
             margin: 0 0 10px;
             @include font($height: 2.1rem, $weight: 500);
             white-space: nowrap;
+
+            @include media-small-desktop {
+                white-space: initial;
+                padding-right: 30px;
+            }
+
+            @include media-large-tablet {
+                padding-right: 0;
+            }
+
+            @include media-small-tablet {
+                display: none;
+            }
+        }
+
+        &__paragraph {
+            @include media-small-tablet {
+                display: none;
+            }
         }
 
         &__link {

@@ -1,12 +1,54 @@
 .layout-2-column {
     @include columns($width: 40%);
+
+    @include media-small-desktop {
+        @include columns($width: 48.3%);
+    }
+
+    @include media-large-tablet {
+        @include columns($width: 81%);
+    }
+
+    @include media-small-tablet {
+        @include columns($width: 100%);
+    }
 }
 
 .layout-3-column {
     @include columns($width: 31%);
     row-gap: 20px;
+
+    @include media-desktop {
+        row-gap: 92px;
+    }
+
+    @include media-small-desktop {
+        @include columns($width: 31.4%);
+    }
+
+    @include media-large-tablet {
+        @include columns($width: 48%);
+
+        .steps-container {
+            @include columns($width: 31.4%);
+        }
+    }
+
+    @include media-small-tablet {
+        @include columns($width: 95%);
+        row-gap: 20px;
+    }
 }
 
 .layout-4-column {
     @include columns($width: 23%);
+
+    @include media-small-desktop {
+        @include columns($width: 31%);
+    }
+
+    @include media-large-tablet {
+        @include columns($width: 100%);
+        row-gap: 15px;
+    }
 }
