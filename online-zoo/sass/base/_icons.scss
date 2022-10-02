@@ -172,5 +172,19 @@
         background-image: url("../assets/images/icons/panda_widget1.svg");
         background-position: center;
         background-repeat: no-repeat;
+        background-size: contain;
+
+        @include media-small-tablet {
+            width: 55%;
+            height: 170px;
+            background-size: 70%;
+        }
+
+        @include media-mobile {
+            width: 55%;
+            height: 140px;
+            background-size: 94%;
+            background-position: 10px 0;
+        }
     }
 }

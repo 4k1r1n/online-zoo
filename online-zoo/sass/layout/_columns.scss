@@ -9,7 +9,7 @@
         @include columns($width: 81%);
     }
 
-    @include media-small-tablet {
+    @include media-mobile {
         @include columns($width: 100%);
     }
 }
@@ -28,15 +28,17 @@
 
     @include media-large-tablet {
         @include columns($width: 48%);
-
-        .steps-container {
-            @include columns($width: 31.4%);
-        }
     }
 
     @include media-small-tablet {
-        @include columns($width: 95%);
+        @include columns($width: 65%);
+        justify-content: center;
         row-gap: 20px;
+    }
+
+    @include media-mobile {
+        @include columns($width: 95%);
+        justify-content: center;
     }
 }
 

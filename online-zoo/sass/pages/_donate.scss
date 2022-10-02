@@ -1,12 +1,45 @@
 .donate {
     .preview {
         height: 386px;
+        background-image: url("../assets/images/backgrounds/giant-panda.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include media-small-desktop {
+            height: 390px;
+            background-position: 29%;
+            background-size: 160%;
+        }
+
+        @include media-large-tablet {
+            height: 335px;
+            background-position: 37%;
+            background-size: 210%;
+        }
+
+        @include media-small-tablet {
+            height: 187px;
+            background-position: 33%;
+            background-size: 220%;
+        }
 
         img {
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
+
+            @include media-small-desktop {
+                width: 160%;
+                position: relative;
+                left: -18%;
+            }
+
+            @include media-large-tablet {
+                width: 200%;
+                left: -38%;
+            }
         }
     }
 
@@ -14,19 +47,65 @@
         color: $color-text;
         padding: 40px 0 178px;
 
+        @include media-small-desktop {
+            padding-bottom: 30px;
+        }
+
+        @include media-large-tablet {
+            padding: 30px 0 45px;
+        }
+
+        @include media-small-tablet {
+            padding-bottom: 20px;
+        }
+
         &__heading {
             margin: 0;
             color: $color-light;
 
+            @include media-small-desktop {
+                @include font($height: 4.7rem, $size: 3.6rem);
+                width: 80%;
+                margin-bottom: 30px;
+            }
+
+            @include media-large-tablet {
+                @include font($height: 2.9rem, $size: 2.4rem);
+                color: $color-light;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
             &--colored {
                 color: $color-additional;
                 margin: 0 0 56px;
+
+                @include media-small-desktop {
+                    margin-bottom: 40px;
+                }
+
+                @include media-large-tablet {
+                    @include font($height: 4.7rem, $size: 3.6rem);
+                    margin-bottom: 30px;
+                }
+
+                @include media-small-tablet {
+                    @include font($height: 2.9rem, $size: 2.4rem);
+                }
             }
         }
 
         &__text {
             margin: 0 0 40px;
             @include font($height: 2.2rem, $weight: 500);
+
+            @include media-small-desktop {
+                margin-bottom: 48px;
+            }
+
+            @include media-large-tablet {
+                margin-bottom: 30px;
+            }
 
             &--colored {
                 color: $color-light;
@@ -36,30 +115,100 @@
 
         &__wrapper {
             padding: 40px 92px 62px;
+
+            @include media-small-desktop {
+                padding: 20px 45px 46px;
+            }
+
+            @include media-large-tablet {
+                padding: 30px 0 31px;
+            }
+
+            @include media-small-tablet {
+                padding: 20px 0;
+            }
         }
 
         &__subtitle {
             margin: 0 0 55px;
+
+            @include media-large-tablet {
+                text-align: center;
+            }
+
+            @include media-small-tablet {
+                @include font($size: 1.6rem, $height: 2.2rem);
+                margin-bottom: 10px;
+            }
         }
 
         &__title {
             margin: 0 0 20px;
+
+            @include media-small-desktop {
+                margin-bottom: 10px;
+            }
+
+            @include media-large-tablet {
+                margin-bottom: 20px;
+            }
+
+            @include media-small-tablet {
+                @include font($size: 2.4rem, $height: 2.9rem);
+                margin-bottom: 10px;
+            }
         }
 
         &__link-button {
             margin-bottom: 25px;
+
+
+            @include media-small-tablet {
+                margin-bottom: 21px;
+            }
         }
 
         &__link {
             text-align: center;
+
+            @include media-small-tablet {
+                text-align: left;
+                white-space: nowrap;
+            }
         }
 
         &__amount-bar {
             margin-bottom: 98px;
 
+            @include media-small-desktop {
+                padding: 0 19px;
+            }
+
+            @include media-large-tablet {
+                padding: 0;
+            }
+
+            @include media-small-tablet {
+                padding-left: 0;
+                margin-bottom: 49px;
+            }
+
             &-title {
                 @include font($height: 2.2rem, $weight: 400);
                 margin: 0 0 17px;
+
+                @include media-small-desktop {
+                    margin: 0 0 14px;
+                }
+
+                @include media-large-tablet {
+                    margin-bottom: 7px;
+                    padding-left: 10px;
+                }
+
+                @include media-small-tablet {
+                    padding-left: 0;
+                }
             }
         }
 
@@ -70,6 +219,10 @@
             background: $color-amount-bar;
             border-radius: 2px;
 
+            @include media-small-tablet {
+                height: 13px;
+            }
+
             &::after {
                 content: "";
                 position: absolute;
@@ -79,21 +232,59 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 background-color: $color-amount-bar-track;
+
+                @include media-small-desktop {
+                    width: 96%;
+                }
+
+                @include media-large-tablet {
+                    width: 88%;
+                }
+
+                @include media-small-tablet {
+                    height: 1px;
+                }
             }
 
             &__item {
                 position: relative;
+
+                @include media-small-desktop {
+                    &:first-child {
+                        display: none;
+                    }
+                }
+
+                @include media-large-tablet {
+                    &:nth-child(2) {
+                        display: none;
+                    }
+
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
 
                 >.amount-bar__radiobutton {
                     &:checked {
                         &::after {
                             outline: 2px solid $color-additional;
                             outline-offset: 4px;
+
+                            @include media-small-tablet {
+                                outline-width: 1px;
+                                outline-offset: 3px;
+                            }
                         }
 
                         &::before {
                             outline: 2px solid $color-additional;
                             outline-offset: 12px;
+
+                            @include media-small-tablet {
+                                outline-width: 1px;
+                                outline-offset: 7px;
+                            }
                         }
 
                         &~.amount-bar__label {
@@ -105,11 +296,21 @@
                         &::after {
                             outline: 2px solid $color-additional;
                             outline-offset: 4px;
+
+                            @include media-small-tablet {
+                                outline-width: 1px;
+                                outline-offset: 3px;
+                            }
                         }
 
                         &::before {
                             outline: 2px solid $color-additional;
                             outline-offset: 12px;
+
+                            @include media-small-tablet {
+                                outline-width: 1px;
+                                outline-offset: 7px;
+                            }
                         }
 
                         &~.amount-bar__label {
@@ -136,6 +337,11 @@
                 text-transform: uppercase;
                 pointer-events: none;
                 @extend %transition;
+
+                @include media-small-tablet {
+                    @include font($weight: 500, $size: 1.3rem, $height: 1.8rem);
+                    top: 40%;
+                }
             }
 
             &__radiobutton {
@@ -146,6 +352,19 @@
                 width: 60px;
                 height: 100%;
                 cursor: pointer;
+
+                @include media-small-desktop {
+                    width: 35px;
+                }
+
+                @include media-large-tablet {
+                    width: 80px;
+                }
+
+                @include media-small-tablet {
+                    width: 40px;
+                    top: -5px;
+                }
 
                 &::after {
                     content: "";
@@ -162,6 +381,11 @@
                     outline: 2px solid transparent;
                     outline-offset: 0;
                     @extend %transition;
+
+                    @include media-small-tablet {
+                        width: 5px;
+                        height: 5px;
+                    }
                 }
 
                 &::before {
@@ -178,6 +402,11 @@
                     outline: 2px solid transparent;
                     outline-offset: 0;
                     @extend %transition;
+
+                    @include media-small-tablet {
+                        width: 5px;
+                        height: 5px;
+                    }
                 }
             }
         }
@@ -187,6 +416,20 @@
             padding-left: 215px;
             position: relative;
             margin-bottom: 55px;
+
+            @include media-small-desktop {
+                padding-left: 150px;
+            }
+
+            @include media-large-tablet {
+                padding-left: 5%;
+                margin-bottom: 35px;
+            }
+
+            @include media-mobile {
+                margin-bottom: 5px;
+                padding-left: 0;
+            }
         }
 
         &__promo-text {
@@ -198,6 +441,16 @@
             gap: 10px;
             margin: 0;
 
+            @include media-large-tablet {
+                padding-top: 100px;
+            }
+
+            @include media-small-tablet {
+                @include font($size: 0.9rem, $height: 1.3rem);
+                padding: 60px 40px 0 0;
+                gap: 7px;
+            }
+
             &::after {
                 content: "";
                 width: 14px;
@@ -206,16 +459,40 @@
                 background-image: url("../assets/images/icons/x_icon.svg");
                 right: 59%;
                 bottom: 40%;
+
+                @include media-small-desktop {
+                    right: 61%;
+                }
+
+                @include media-large-tablet {
+                    right: 65%;
+                    bottom: 45%;
+                }
+
+                @include media-small-tablet {
+                    right: 64%;
+                    bottom: 40%;
+                    background-repeat: no-repeat;
+                    background-size: 75%;
+                }
             }
 
             &--number {
                 @include font($weight: 500, $size: 7.2rem, $height: 5.8rem);
                 color: $color-dark;
+
+                @include media-small-tablet {
+                    @include font($weight: 500, $size: 4rem, $height: 3.2rem);
+                }
             }
         }
 
         &__amount-form {
             margin-bottom: 30px;
+
+            @include media-small-tablet {
+                margin-bottom: 27px;
+            }
         }
 
         .amount-form {
@@ -223,6 +500,14 @@
             flex-direction: column;
             align-items: center;
             gap: 23px;
+
+            @include media-large-tablet {
+                gap: 31px;
+            }
+
+            @include media-small-tablet {
+                gap: 28px;
+            }
 
             &__number {
                 position: relative;
@@ -237,6 +522,11 @@
                 border-radius: 2px;
                 background: $color-transparent;
                 color: $color-amount-form-placeholder;
+
+                @include media-large-tablet {
+                    width: 180px;
+                    padding: 10px 10px 10px 6px;
+                }
 
                 &~i {
                     position: absolute;
@@ -283,6 +573,10 @@
                 display: flex;
                 gap: 50px;
                 padding-right: 25px;
+
+                @include media-small-desktop {
+                    padding-right: 20px;
+                }
             }
 
             &__radiobutton-container {
