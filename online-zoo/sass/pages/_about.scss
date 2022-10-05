@@ -111,6 +111,7 @@
             }
 
             @include media-small-tablet {
+                z-index: 1;
                 left: 50%;
                 transform: translateX(-50%);
                 bottom: -62%;

@@ -3,6 +3,7 @@
     position: relative;
     width: 18px;
     height: 10px;
+    cursor: pointer;
 
     @include media-tablet {
         display: inline-block;
