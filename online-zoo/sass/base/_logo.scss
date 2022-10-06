@@ -3,6 +3,7 @@
     height: 52px;
     border: 1px solid $color-light;
     border-radius: 2px;
+    z-index: 2;
 }
 
 .logo {
@@ -31,10 +32,22 @@
 
 .header {
     .logo-container {
+        @extend %transition;
+
         @include media-large-tablet {
             border: none;
             width: 47px;
             height: 29px;
+        }
+
+        &.active {
+            width: 66px;
+            height: 42px;
+            border: 0.8px solid $color-additional;
+            padding: 3px;
+            position: fixed;
+            top: 8px;
+            left: 10px;
         }
     }
 
@@ -43,6 +56,12 @@
             @include media-large-tablet {
                 @include font($size: 1.2rem, $height: 1.5rem);
                 padding: 0;
+            }
+
+            &.active {
+                @include font($size: 1.5rem, $height: 1.8rem);
+                color: $color-additional;
+                filter: invert(40%) sepia(90%) saturate(1000%);
             }
 
             &::after {

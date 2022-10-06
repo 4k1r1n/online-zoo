@@ -15,6 +15,10 @@
         &:active {
             color: $color-transparent;
         }
+
+        @include media-tablet {
+            color: $color-text;
+        }
     }
 
     &--colored {

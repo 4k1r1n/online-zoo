@@ -4,6 +4,30 @@
     width: 18px;
     height: 10px;
     cursor: pointer;
+    z-index: 2;
+    @extend %transition;
+
+    &.active {
+        margin-left: auto;
+        top: 10px;
+
+        &:before {
+            background-color: $color-text;
+            transform: rotate(45deg);
+            top: calc(50% - 1px);
+        }
+
+        &:after {
+            background-color: $color-text;
+            transform: rotate(-45deg);
+            bottom: calc(50% - 1px);
+        }
+
+        .hamburger__line {
+            transform: scale(0);
+        }
+    }
+
 
     @include media-tablet {
         display: inline-block;
@@ -13,12 +37,14 @@
         @extend %hamburger-line;
         top: 0;
         left: 0;
+        @extend %transition;
     }
 
     &:after {
         @extend %hamburger-line;
         bottom: 0;
         left: 0;
+        @extend %transition;
     }
 }
 

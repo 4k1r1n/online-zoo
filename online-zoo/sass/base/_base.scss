@@ -8,6 +8,10 @@ body {
     @include font();
 }
 
+.lock {
+    overflow: hidden;
+}
+
 h1 {
     @include font($size: 1.9rem);
 }

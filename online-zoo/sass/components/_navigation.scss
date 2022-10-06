@@ -20,11 +20,3 @@
         list-style: none;
     }
 }
-
-.header {
-    .navigation {
-        @include media-tablet {
-            display: none;
-        }
-    }
-}
