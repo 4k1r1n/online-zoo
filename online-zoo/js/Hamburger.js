@@ -1,4 +1,8 @@
-import { hamburger, headerNavigation, headerCopyright, logoContainer, logoTitle } from "../js/constants.js";
+const hamburger = document.querySelector('.hamburger'),
+    headerNavigation = document.querySelector('.header__navigation'),
+    headerCopyright = document.querySelector('.header__copyright'),
+    logoContainer = document.querySelector('.logo-container'),
+    logoTitle = document.querySelector('.logo__title');
 
 const createDomNode = (element, className) => {
     let node = document.createElement(element);
@@ -33,10 +37,5 @@ function removeOverlay() {
     overlay.addEventListener('transitionend', () => overlay.remove());
 }
 
-function resizeListener() {
-    if (window.innerWidth > 640 && hamburger.classList.contains('active')) {
-        toggleHamburgerMenu();
-    }
-}
 
-export { toggleHamburgerMenu, resizeListener }
+export { toggleHamburgerMenu, hamburger }

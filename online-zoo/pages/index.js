@@ -1,6 +1,5 @@
-import { hamburger } from "../js/constants.js";
-import { toggleHamburgerMenu, resizeListener } from "../js/Hamburger.js";
-
+import { hamburger, toggleHamburgerMenu } from '../js/Hamburger.js';
+import { } from '../js/PetsCarousel.js';
 
 hamburger.addEventListener('click', () => {
     toggleHamburgerMenu();
@@ -11,6 +10,12 @@ document.body.addEventListener('click', e => {
         toggleHamburgerMenu();
     }
 })
+
+function resizeListener() {
+    if (window.innerWidth > 640 && hamburger.classList.contains('active')) {
+        toggleHamburgerMenu();
+    }
+}
 
 window.addEventListener("resize", resizeListener);
 
