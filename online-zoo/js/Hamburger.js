@@ -37,5 +37,8 @@ function removeOverlay() {
     overlay.addEventListener('transitionend', () => overlay.remove());
 }
 
+hamburger.addEventListener('click', () => {
+    toggleHamburgerMenu();
+});
 
 export { toggleHamburgerMenu, hamburger }

@@ -2,7 +2,7 @@ import pets from '../js/pets.js';
 
 const BTN_LEFT = document.querySelector('.button-left'),
     BTN_RIGHT = document.querySelector('.button-right'),
-    CAROUSEL = document.querySelector('.carousel');
+    PETS_CAROUSEL = document.querySelector('.pets__carousel');
 
 const createCardTemplate = (id) => {
     return `<div class="card block-bordered">
@@ -23,7 +23,7 @@ const createSlides = () => {
     for (let i = 0; i < 3; i++) {
         let slide = document.createElement('div');
         slide.classList.add('slide');
-        CAROUSEL.appendChild(slide);
+        PETS_CAROUSEL.appendChild(slide);
     }
 }
 
@@ -40,13 +40,13 @@ const shuffle = array => {
 }
 
 const moveLeft = () => {
-    CAROUSEL.classList.add('transition-left');
+    PETS_CAROUSEL.classList.add('transition-left');
     BTN_LEFT.removeEventListener('click', moveLeft);
     BTN_RIGHT.removeEventListener('click', moveRight);
 };
 
 const moveRight = () => {
-    CAROUSEL.classList.add('transition-right');
+    PETS_CAROUSEL.classList.add('transition-right');
     BTN_LEFT.removeEventListener('click', moveLeft);
     BTN_RIGHT.removeEventListener('click', moveRight);
 };
@@ -55,22 +55,22 @@ BTN_LEFT.addEventListener("click", moveLeft);
 BTN_RIGHT.addEventListener("click", moveRight);
 
 
-CAROUSEL.addEventListener('animationend', e => {
+PETS_CAROUSEL.addEventListener('animationend', e => {
     const slides = document.querySelectorAll('.slide');
 
     if (e.animationName === 'move-left') {
-        CAROUSEL.classList.remove('transition-left');
-        CAROUSEL.insertBefore(slides[slides.length - 1], slides[0]);
+        PETS_CAROUSEL.classList.remove('transition-left');
+        PETS_CAROUSEL.insertBefore(slides[slides.length - 1], slides[0]);
     } else {
-        CAROUSEL.classList.remove('transition-right');
-        CAROUSEL.insertBefore(slides[0], slides[slides.length]);
+        PETS_CAROUSEL.classList.remove('transition-right');
+        PETS_CAROUSEL.insertBefore(slides[0], slides[slides.length]);
     }
 
     BTN_LEFT.addEventListener("click", moveLeft);
     BTN_RIGHT.addEventListener("click", moveRight);
 })
 
-CAROUSEL.addEventListener('animationstart', e => {
+PETS_CAROUSEL.addEventListener('animationstart', e => {
     const slides = document.querySelectorAll('.slide');
 
     if (e.animationName === 'move-left') {
@@ -82,13 +82,5 @@ CAROUSEL.addEventListener('animationstart', e => {
     }
 })
 
-window.onload = function () {
-    createSlides();
 
-    const slides = document.querySelectorAll('.slide');
-    [...slides].forEach(slide => {
-        renderCardsToDom(slide);
-    })
-}
-
-export { }
+export { createSlides, renderCardsToDom }

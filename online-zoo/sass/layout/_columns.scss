@@ -42,18 +42,18 @@
     }
 }
 
-.layout-4-column {
-    @include columns($width: 23%);
+// .layout-4-column {
+//     @include columns($width: 23%);
 
-    @include media-small-desktop {
-        @include columns($width: 31%);
-    }
+//     @include media-small-desktop {
+//         @include columns($width: 31%);
+//     }
 
-    @include media-large-tablet {
-        @include columns($width: 100%);
-        row-gap: 15px;
-    }
-}
+//     @include media-large-tablet {
+//         @include columns($width: 100%);
+//         row-gap: 15px;
+//     }
+// }
 
 .slide {
     display: grid;
