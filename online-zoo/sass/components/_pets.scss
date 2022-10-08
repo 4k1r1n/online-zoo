@@ -102,6 +102,15 @@
         }
     }
 
+    @include media-small-tablet {
+        width: 60%;
+        margin: auto;
+    }
+
+    @include media-mobile {
+        width: 100%;
+    }
+
     &__image-container {
         cursor: pointer;
         overflow: hidden;

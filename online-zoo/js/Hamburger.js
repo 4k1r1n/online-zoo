@@ -1,8 +1,9 @@
-const hamburger = document.querySelector('.hamburger'),
+const HAMBURGER = document.querySelector('.hamburger'),
     headerNavigation = document.querySelector('.header__navigation'),
     headerCopyright = document.querySelector('.header__copyright'),
     logoContainer = document.querySelector('.logo-container'),
-    logoTitle = document.querySelector('.logo__title');
+    logoTitle = document.querySelector('.logo__title'),
+    header = document.querySelector('.header');
 
 const createDomNode = (element, className) => {
     let node = document.createElement(element);
@@ -11,34 +12,33 @@ const createDomNode = (element, className) => {
     return node;
 };
 
-function toggleHamburgerMenu() {
-    hamburger.classList.toggle('active');
+const toggleHamburgerMenu = () => {
+    HAMBURGER.classList.toggle('active');
     headerCopyright.classList.toggle('active');
     headerNavigation.classList.toggle('active');
     logoContainer.classList.toggle('active');
     logoTitle.classList.toggle('active');
     document.body.classList.toggle('lock');
 
-    (hamburger.classList.contains('active')) ? addOverlay() : removeOverlay();
+    (HAMBURGER.classList.contains('active')) ? renderOverlayToDom(header) : removeOverlay();
 }
 
-function addOverlay() {
+const renderOverlayToDom = (element) => {
     const overlay = createDomNode('div', 'overlay');
-    logoContainer.after(overlay);
+    element.append(overlay);
     window.getComputedStyle(overlay).opacity;
     overlay.classList.add('in');
 }
 
-function removeOverlay() {
+const removeOverlay = () => {
     const overlay = document.querySelector('.overlay');
     window.getComputedStyle(overlay).opacity;
     overlay.classList.remove('in');
-
     overlay.addEventListener('transitionend', () => overlay.remove());
 }
 
-hamburger.addEventListener('click', () => {
+HAMBURGER.addEventListener('click', e => {
     toggleHamburgerMenu();
 });
 
-export { toggleHamburgerMenu, hamburger }
+export { toggleHamburgerMenu, HAMBURGER, createDomNode, removeOverlay, renderOverlayToDom }

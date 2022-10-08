@@ -1,0 +1,59 @@
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    &__wrapper {
+        z-index: 2;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .testimonial {
+        min-height: 391px;
+        min-width: 267px;
+        pointer-events: none;
+
+        &__text {
+            height: 309px;
+        }
+    }
+}
+
+.close-button {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    bottom: 5px;
+    cursor: pointer;
+    z-index: 2;
+    left: calc(100% + 3px);
+
+    &::after {
+        content: "";
+        width: 18px;
+        top: 0;
+        display: inline-block;
+        position: absolute;
+        background: $color-additional-gradient;
+        height: 2px;
+        transform: rotate(-45deg);
+        border-radius: 2px;
+    }
+
+    &::before {
+        content: "";
+        width: 18px;
+        top: 0;
+        display: inline-block;
+        position: absolute;
+        background: $color-additional-gradient;
+        border-radius: 2px;
+        height: 2px;
+        transform: rotate(45deg);
+    }
+}

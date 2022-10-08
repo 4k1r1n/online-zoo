@@ -115,6 +115,10 @@
         padding-top: 11px
     }
 
+    @include media-tablet {
+        cursor: pointer;
+    }
+
     &__header {
         display: flex;
         gap: 10px;
