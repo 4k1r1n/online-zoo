@@ -112,20 +112,19 @@
         @include media-large-tablet {
             width: 95px;
             top: -18px;
-            right: -70%;
+            left: calc(100% + 10%);
             background: url("../assets/images/icons/arrow-2.svg") no-repeat;
             z-index: 1;
         }
 
         @include media-tablet {
-            right: -40%;
+            left: calc(100% - 10%);
         }
 
         @include media-small-tablet {
             transform: rotate(90deg);
             top: 90%;
-            left: 80%;
-            right: 0;
+            left: calc(100% - 30%);
         }
     }
 }
