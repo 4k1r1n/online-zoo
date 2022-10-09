@@ -34,5 +34,4 @@ const moveTestimonial = () => {
 
 SCROLLBAR.addEventListener('input', moveTestimonial);
 
-
 export { renderTestimonialsToDom, moveTestimonial, SCROLLBAR, TESTIMONIALS_CAROUSEL }

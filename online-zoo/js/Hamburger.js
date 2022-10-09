@@ -41,4 +41,10 @@ HAMBURGER.addEventListener('click', e => {
     toggleHamburgerMenu();
 });
 
+document.body.addEventListener('click', e => {
+    if (e.target === document.querySelector('.overlay') && HAMBURGER.classList.contains('active')) {
+        toggleHamburgerMenu();
+    }
+})
+
 export { toggleHamburgerMenu, HAMBURGER, createDomNode, removeOverlay, renderOverlayToDom }

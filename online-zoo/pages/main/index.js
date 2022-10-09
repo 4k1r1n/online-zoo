@@ -1,13 +1,7 @@
-import { HAMBURGER, toggleHamburgerMenu } from '../js/Hamburger.js';
-import { createSlides, renderCardsToDom } from '../js/PetsCarousel.js';
-import { renderTestimonialsToDom, SCROLLBAR, TESTIMONIALS_CAROUSEL } from '../js/TestimonialsCarousel.js';
-import { closePopup } from '../js/TestimonialPopUp.js';
-
-document.body.addEventListener('click', e => {
-    if (e.target === document.querySelector('.overlay') && HAMBURGER.classList.contains('active')) {
-        toggleHamburgerMenu();
-    }
-})
+import { HAMBURGER, toggleHamburgerMenu } from '../../js/Hamburger.js';
+import { createSlides, renderCardsToDom } from '../../js/PetsCarousel.js';
+import { renderTestimonialsToDom, SCROLLBAR, TESTIMONIALS_CAROUSEL } from '../../js/TestimonialsCarousel.js';
+import { closePopup } from '../../js/TestimonialPopUp.js';
 
 function resizeListener() {
     if (window.innerWidth > 640 && HAMBURGER.classList.contains('active')) {

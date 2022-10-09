@@ -82,5 +82,4 @@ PETS_CAROUSEL.addEventListener('animationstart', e => {
     }
 })
 
-
 export { createSlides, renderCardsToDom }
