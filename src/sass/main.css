@@ -562,7 +562,7 @@ img {
   left: 13px;
   width: 7px;
   height: 21px;
-  background-image: url("../assets/images/icons/bamboo.svg");
+  background-image: url("../assets/icons/bamboo.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -688,7 +688,7 @@ img {
 .icon--herbivorous {
   width: 33px;
   height: 37px;
-  background-image: url("../assets/images/icons/banana-bamboo_icon.svg");
+  background-image: url("../assets/icons/banana-bamboo.svg");
   opacity: 1;
   transition: all 0.4s ease-in-out;
 }
@@ -703,7 +703,7 @@ img {
 .icon--carnivores {
   width: 48px;
   height: 38px;
-  background-image: url("../assets/images/icons/meet-fish_icon.svg");
+  background-image: url("../assets/icons/meet-fish.svg");
   opacity: 1;
   transition: all 0.4s ease-in-out;
 }
@@ -759,21 +759,21 @@ img {
 .icon--pay {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/icons/pay.svg");
+  background-image: url("../assets/icons/pay.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--zoo {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/icons/zoo.svg");
+  background-image: url("../assets/icons/zoo.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--monkey {
   width: 100%;
   height: 100%;
-  background-image: url("../assets/images/icons/monkey.svg");
+  background-image: url("../assets/icons/monkey.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -781,19 +781,19 @@ img {
   width: 16px;
   height: 8px;
   z-index: 1;
-  background-image: url("../assets/images/icons/arrow-slider.svg");
+  background-image: url("../assets/icons/arrow-slider.svg");
 }
 .icon--arrow-right {
   width: 16px;
   height: 8px;
   z-index: 1;
   transform: rotate(180deg);
-  background-image: url("../assets/images/icons/arrow-slider.svg");
+  background-image: url("../assets/icons/arrow-slider.svg");
 }
 .icon--avatar-user01 {
   width: 37px;
   height: 37px;
-  background-image: url("../assets/images/icons/no-photo.svg");
+  background-image: url("../assets/icons/no-photo.svg");
 }
 .icon--avatar-user02 {
   width: 37px;
@@ -811,29 +811,29 @@ img {
   background-image: url("../assets/images/testimonials/4.png");
 }
 .icon--facebook {
-  background-image: url("../assets/images/icons/facebook.svg");
+  background-image: url("../assets/icons/facebook.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--twitter {
-  background-image: url("../assets/images/icons/twitter.svg");
+  background-image: url("../assets/icons/twitter.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--inst {
-  background-image: url("../assets/images/icons/inst.svg");
+  background-image: url("../assets/icons/inst.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--youtube {
-  background-image: url("../assets/images/icons/youtube.svg");
+  background-image: url("../assets/icons/youtube.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
 .icon--panda {
   width: 284px;
   height: 246px;
-  background-image: url("../assets/images/icons/panda_widget1.svg");
+  background-image: url("../assets/icons/panda_widget1.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1505,14 +1505,14 @@ img {
   height: 38px;
   top: 25%;
   right: -60%;
-  background: url("../assets/images/icons/arrow-1.svg") no-repeat;
+  background: url("../assets/icons/arrow-1.svg") no-repeat;
 }
 @media (max-width: 980px) {
   .step:not(:last-child)::after {
     width: 95px;
     top: -18px;
     left: 110%;
-    background: url("../assets/images/icons/arrow-2.svg") no-repeat;
+    background: url("../assets/icons/arrow-2.svg") no-repeat;
     z-index: 1;
   }
 }
@@ -3052,7 +3052,7 @@ img {
   width: 14px;
   height: 14px;
   position: absolute;
-  background-image: url("../assets/images/icons/x_icon.svg");
+  background-image: url("../assets/icons/x_icon.svg");
   right: 59%;
   bottom: 40%;
 }

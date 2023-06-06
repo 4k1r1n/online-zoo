@@ -4,7 +4,7 @@
     &--herbivorous {
         width: 33px;
         height: 37px;
-        background-image: url("../assets/images/icons/banana-bamboo_icon.svg");
+        background-image: url("../assets/icons/banana-bamboo.svg");
         opacity: 1;
         transition: all .4s ease-in-out;
 
@@ -19,7 +19,7 @@
     &--carnivores {
         width: 48px;
         height: 38px;
-        background-image: url("../assets/images/icons/meet-fish_icon.svg");
+        background-image: url("../assets/icons/meet-fish.svg");
         opacity: 1;
         transition: all .4s ease-in-out;
 
@@ -82,7 +82,7 @@
     &--pay {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/images/icons/pay.svg");
+        background-image: url("../assets/icons/pay.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -90,7 +90,7 @@
     &--zoo {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/images/icons/zoo.svg");
+        background-image: url("../assets/icons/zoo.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -98,7 +98,7 @@
     &--monkey {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/images/icons/monkey.svg");
+        background-image: url("../assets/icons/monkey.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -107,7 +107,7 @@
         width: 16px;
         height: 8px;
         z-index: 1;
-        background-image: url("../assets/images/icons/arrow-slider.svg");
+        background-image: url("../assets/icons/arrow-slider.svg");
     }
 
     &--arrow-right {
@@ -115,13 +115,13 @@
         height: 8px;
         z-index: 1;
         transform: rotate(180deg);
-        background-image: url("../assets/images/icons/arrow-slider.svg");
+        background-image: url("../assets/icons/arrow-slider.svg");
     }
 
     &--avatar-user01 {
         width: 37px;
         height: 37px;
-        background-image: url("../assets/images/icons/no-photo.svg");
+        background-image: url("../assets/icons/no-photo.svg");
     }
 
     &--avatar-user02 {
@@ -143,25 +143,25 @@
     }
 
     &--facebook {
-        background-image: url("../assets/images/icons/facebook.svg");
+        background-image: url("../assets/icons/facebook.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
 
     &--twitter {
-        background-image: url("../assets/images/icons/twitter.svg");
+        background-image: url("../assets/icons/twitter.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
 
     &--inst {
-        background-image: url("../assets/images/icons/inst.svg");
+        background-image: url("../assets/icons/inst.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
 
     &--youtube {
-        background-image: url("../assets/images/icons/youtube.svg");
+        background-image: url("../assets/icons/youtube.svg");
         background-position: center;
         background-repeat: no-repeat;
     }
@@ -169,7 +169,7 @@
     &--panda {
         width: 284px;
         height: 246px;
-        background-image: url("../assets/images/icons/panda_widget1.svg");
+        background-image: url("../assets/icons/panda_widget1.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
