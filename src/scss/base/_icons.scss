@@ -1,10 +1,12 @@
 .icon {
     display: inline-block;
+    background-repeat: no-repeat;
 
     &--herbivorous {
         width: 33px;
         height: 37px;
-        background-image: url("../assets/icons/banana-bamboo.svg");
+        background-image: url("./assets/icons/banana-bamboo.svg");
+        background-size: 33px 37px;
         opacity: 1;
         transition: all .4s ease-in-out;
 
@@ -19,7 +21,7 @@
     &--carnivores {
         width: 48px;
         height: 38px;
-        background-image: url("../assets/icons/meet-fish.svg");
+        background-image: url("./assets/icons/meet-fish.svg");
         opacity: 1;
         transition: all .4s ease-in-out;
 
@@ -82,32 +84,29 @@
     &--pay {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/icons/pay.svg");
+        background-image: url("./assets/icons/pay.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--zoo {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/icons/zoo.svg");
+        background-image: url("./assets/icons/zoo.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--monkey {
         width: 100%;
         height: 100%;
-        background-image: url("../assets/icons/monkey.svg");
+        background-image: url("./assets/icons/monkey.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--arrow-left {
         width: 16px;
         height: 8px;
         z-index: 1;
-        background-image: url("../assets/icons/arrow-slider.svg");
+        background-image: url("./assets/icons/arrow-slider.svg");
     }
 
     &--arrow-right {
@@ -115,63 +114,58 @@
         height: 8px;
         z-index: 1;
         transform: rotate(180deg);
-        background-image: url("../assets/icons/arrow-slider.svg");
+        background-image: url("./assets/icons/arrow-slider.svg");
     }
 
     &--avatar-user01 {
         width: 37px;
         height: 37px;
-        background-image: url("../assets/icons/no-photo.svg");
+        background-image: url("./assets/icons/no-photo.svg");
     }
 
     &--avatar-user02 {
         width: 37px;
         height: 37px;
-        background-image: url("../assets/images/testimonials/2.png");
+        background-image: url("./assets/images/testimonials/2.png");
     }
 
     &--avatar-user03 {
         width: 37px;
         height: 37px;
-        background-image: url("../assets/images/testimonials/3.png");
+        background-image: url("./assets/images/testimonials/3.png");
     }
 
     &--avatar-user04 {
         width: 37px;
         height: 37px;
-        background-image: url("../assets/images/testimonials/4.png");
+        background-image: url("./assets/images/testimonials/4.png");
     }
 
     &--facebook {
-        background-image: url("../assets/icons/facebook.svg");
+        background-image: url("./assets/icons/facebook.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--twitter {
-        background-image: url("../assets/icons/twitter.svg");
+        background-image: url("./assets/icons/twitter.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--inst {
-        background-image: url("../assets/icons/inst.svg");
+        background-image: url("./assets/icons/inst.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--youtube {
-        background-image: url("../assets/icons/youtube.svg");
+        background-image: url("./assets/icons/youtube.svg");
         background-position: center;
-        background-repeat: no-repeat;
     }
 
     &--panda {
         width: 284px;
         height: 246px;
-        background-image: url("../assets/icons/panda_widget1.svg");
+        background-image: url("./assets/icons/panda_widget1.svg");
         background-position: center;
-        background-repeat: no-repeat;
         background-size: contain;
 
         @include media-small-tablet {

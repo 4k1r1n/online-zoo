@@ -107,13 +107,13 @@
         height: 38px;
         top: 25%;
         right: -60%;
-        background: url("../assets/icons/arrow-1.svg") no-repeat;
+        background: url("./assets/icons/arrow-1.svg") no-repeat;
 
         @include media-large-tablet {
             width: 95px;
             top: -18px;
             left: calc(100% + 10%);
-            background: url("../assets/icons/arrow-2.svg") no-repeat;
+            background: url("./assets/icons/arrow-2.svg") no-repeat;
             z-index: 1;
         }
 

@@ -1,19 +1,22 @@
 {
-  "name": "4k1r1n-jsfe2022q3",
-  "version": "1.0.0",
-  "description": "Private repository for @4k1r1n",
-  "main": "index.js",
+  "name": "online-zoo",
   "scripts": {
-    "style": "sass --watch online-zoo/sass/main.scss online-zoo/sass/main.css"
+    "dev": "gulp",
+    "build": "gulp build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rolling-scopes-school/4k1r1n-JSFE2022Q3.git"
-  },
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rolling-scopes-school/4k1r1n-JSFE2022Q3/issues"
-  },
-  "homepage": "https://github.com/rolling-scopes-school/4k1r1n-JSFE2022Q3#readme"
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify-es": "^3.0.0",
+    "sass": "^1.64.1",
+    "webpack-stream": "^7.0.0"
+  }
 }
