@@ -1,10 +1,13 @@
 .donation {
     background: $color-additional-gradient;
+    z-index: 1;
+    position: relative;
 
     &__wrapper {
         border-radius: 20px;
+        z-index: 1;
+        position: relative;
         background: $color-background;
-        backdrop-filter: blur(2px);
     }
 
     &__title {
