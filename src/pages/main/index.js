@@ -1,9 +1,7 @@
-import { HAMBURGER, toggleHamburgerMenu } from '../../js/Hamburger';
+import { burger, toggleBurgerMenu } from '../../components/Burger';
 import { createSlides, renderCardsToDom } from '../../js/PetsCarousel';
 import { renderTestimonialsToDom, SCROLLBAR, TESTIMONIALS_CAROUSEL } from '../../js/TestimonialsCarousel';
 // import closePopup from '../../js/TestimonialPopUp';
-import '../../sass/style.scss';
-import { burger, toggleBurgerMenu } from '../../components/Burger';
 
 const backstageContent = document.querySelector('.backstage__content');
 const imageBambooCap = document.createElement('img');
@@ -15,7 +13,7 @@ backstageContent.before(imageBambooCap);
 let isBurgerOpen = false;
 
 function resizeListener() {
-  if (window.innerWidth > 640 && burger.classList.contains('active')) {
+  if (window.innerWidth > 640 && BURGER.classList.contains('active')) {
     toggleBurgerMenu();
     isBurgerOpen = true;
   }

@@ -1,8 +1,8 @@
-import { burger, toggleBurgerMenu } from '../../js/Burger';
-import setDefaultAmount from '../../js/AmountPanel';
+import { BURGER, toggleBurgerMenu } from '../../components/Burger';
+import setDefaultAmount from '../../components/AmountPanel';
 
 function resizeListener() {
-  if (window.innerWidth > 640 && burger.classList.contains('active')) {
+  if (window.innerWidth > 640 && BURGER.classList.contains('active')) {
     toggleBurgerMenu();
   }
 }

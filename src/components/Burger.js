@@ -1,7 +1,7 @@
 import createDomNode from '../utils/create-element';
 
-const burger = document.querySelector('.burger');
-const header = document.querySelector('.header');
+const BURGER = document.querySelector('.burger');
+const HEADER = document.querySelector('.header');
 const navigationItems = document.querySelectorAll('.navigation__item');
 
 const renderOverlayToDom = (element) => {
@@ -21,30 +21,30 @@ const removeOverlay = () => {
 };
 
 const toggleBurgerMenu = () => {
-  header.classList.toggle('active');
-  burger.classList.toggle('active');
+  HEADER.classList.toggle('active');
+  BURGER.classList.toggle('active');
   document.body.classList.toggle('lock');
   toggleOverlay();
 };
 
 const toggleOverlay = () => {
-  if (burger.classList.contains('active')) {
-    renderOverlayToDom(header);
+  if (BURGER.classList.contains('active')) {
+    renderOverlayToDom(HEADER);
   } else {
     removeOverlay();
   }
 };
 
-burger.addEventListener('click', () => {
+BURGER.addEventListener('click', () => {
   toggleBurgerMenu();
 });
 
 navigationItems.forEach((navigationItem) => {
   navigationItem.addEventListener('click', () => {
-    if (burger.classList.contains('active')) {
+    if (BURGER.classList.contains('active')) {
       toggleBurgerMenu();
     }
   });
 });
 
-export { burger, toggleBurgerMenu };
+export { BURGER, toggleBurgerMenu };
