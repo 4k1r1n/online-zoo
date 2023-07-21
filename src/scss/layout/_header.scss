@@ -6,6 +6,40 @@
     position: relative;
     z-index: 2;
 
+    &.active {
+        .header {
+            &__copyright {
+                @include media-tablet {
+                    top: 27rem;
+                    left: 10px;
+                }
+            }
+
+            &__navigation {
+                top: 0;
+                background-color: $color-light;
+            }
+        }
+
+        .logo {
+            &__title {
+                @include font($size: 1.5rem, $height: 1.8rem);
+                color: $color-additional;
+                filter: invert(40%) sepia(90%) saturate(1000%);
+            }
+
+            &-container {
+                width: 66px;
+                height: 42px;
+                border: 0.8px solid $color-additional;
+                padding: 3px;
+                position: fixed;
+                top: 8px;
+                left: 10px;
+            }
+        }
+    }
+
     @include media-tablet {
         padding: 3px 0;
         position: sticky;
@@ -38,11 +72,6 @@
             top: -100vw;
             margin-left: 0;
             @include font($size: 1.6rem, $height: 2.2rem);
-
-            &.active {
-                top: 27rem;
-                left: 10px;
-            }
         }
     }
 
@@ -51,18 +80,14 @@
         z-index: 2;
 
         @include media-tablet {
+            display: none;
             position: fixed;
             display: flex;
             top: -200vw;
             left: 0;
             width: 100vw;
             height: 329px;
-            background-color: $color-light;
             padding: 82px 10px 10px;
-
-            &.active {
-                top: 0;
-            }
         }
     }
 }

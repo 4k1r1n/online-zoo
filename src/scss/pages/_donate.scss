@@ -456,7 +456,7 @@
                 width: 14px;
                 height: 14px;
                 position: absolute;
-                background-image: url("./assets/icons/icons.svg#x_icon");
+                background-image: url("./assets/icons/x.svg");
                 right: 59%;
                 bottom: 40%;
 
@@ -582,6 +582,7 @@
             &__radiobutton-container {
                 display: flex;
                 gap: 10px;
+                align-items: center;
             }
 
             &__radiobutton {

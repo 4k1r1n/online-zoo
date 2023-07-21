@@ -1,9 +1,9 @@
-import { HAMBURGER, toggleHamburgerMenu } from '../../js/Hamburger';
+import { burger, toggleBurgerMenu } from '../../js/Burger';
 import setDefaultAmount from '../../js/AmountPanel';
 
 function resizeListener() {
-  if (window.innerWidth > 640 && HAMBURGER.classList.contains('active')) {
-    toggleHamburgerMenu();
+  if (window.innerWidth > 640 && burger.classList.contains('active')) {
+    toggleBurgerMenu();
   }
 }
 
