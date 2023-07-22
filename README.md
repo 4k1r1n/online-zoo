@@ -1,6 +1,6 @@
 # Online-zoo
 
-Online-zoo is a platform that collects information about animals from various zoos with webcams.
+Online-zoo is a website with an adaptive layout and interactivity of the main and donation pages.
 
 [View Demo](https://4k1r1n.github.io/online-zoo/)
 
