@@ -1,46 +1,48 @@
-// import { createDomNode, renderOverlayToDom } from './Hamburger';
+import { renderOverlay, removeOverlay } from './Overlay';
+import createDomNode from '../utils/create-element';
+import { TESTIMONIALS_CAROUSEL } from './TestimonialsCarousel';
 
-// const TESTIMONIALS = document.querySelectorAll('.testimonial');
+const TESTIMONIALS = document.querySelector('.testimonials');
 
-// const renderPopupToDom = () => {
-//   const popup = createDomNode('div', 'popup');
-//   const popupWrapper = createDomNode('div', 'popup__wrapper');
-//   const closeButton = createDomNode('span', 'close-button');
+const renderPopup = () => {
+  const popup = createDomNode('div', 'popup active');
+  const popupWrapper = createDomNode('div', 'popup__wrapper');
+  const closeButton = createDomNode('span', 'close-button');
+  TESTIMONIALS.append(popup);
+  popup.append(popupWrapper);
+  popupWrapper.append(closeButton);
+  closeButton.addEventListener('click', closePopup);
+};
 
-//   TESTIMONIALS.append(popup);
-//   popup.append(popupWrapper);
-//   popupWrapper.append(closeButton);
-// };
+const removePopup = () => {
+  const popup = document.querySelector('.popup');
+  popup.classList.remove('active');
+  popup.addEventListener('transitionend', () => popup.remove());
+};
 
-// const removePopupFromDom = () => {
-//   const popup = document.querySelector('.popup');
-//   TESTIMONIALS.removeChild(popup);
-// };
+const addTestimonialToPopup = (currentTestimonial) => {
+  const popupWrapper = document.querySelector('.popup__wrapper');
+  popupWrapper.append(currentTestimonial.cloneNode(true));
+};
 
-// const addTestimonialToPopup = (currentTestimonial) => {
-//   const popupWrapper = document.querySelector('.popup__wrapper');
-//   popupWrapper.append(currentTestimonial.cloneNode(true));
-// };
+const openPopup = () => {
+  renderPopup();
+  const popup = document.querySelector('.popup');
+  renderOverlay(popup, closePopup);
+  document.body.classList.add('lock');
+};
 
-// const openPopup = () => {
-//   renderPopupToDom();
-//   const popup = document.querySelector('.popup');
-//   renderOverlayToDom(popup);
-//   document.body.classList.add('lock');
-// };
+const closePopup = () => {
+  document.body.classList.remove('lock');
+  removeOverlay(closePopup);
+  removePopup();
+};
 
-// const closePopup = () => {
-//   document.body.classList.remove('lock');
-//   removePopupFromDom();
-//   removeOverlay();
-// };
+TESTIMONIALS_CAROUSEL.addEventListener('click', (e) => {
+  if (window.innerWidth <= 640) {
+    openPopup();
+    addTestimonialToPopup(e.target.closest('.testimonial'));
+  }
+});
 
-// for (const TESTIMONIAL of TESTIMONIALS) {
-//   TESTIMONIAL.addEventListener('click', () => {
-//     if (window.innerWidth <= 640) {
-//       openPopup();
-//       console.log('fff');
-//       addTestimonialToPopup(e.target.closest('.testimonial'));
-//     }
-//   });
-// }
+export default closePopup;

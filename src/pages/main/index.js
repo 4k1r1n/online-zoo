@@ -1,18 +1,24 @@
-import { burger, toggleBurgerMenu } from '../../components/Burger';
-import { createSlides, renderCardsToDom } from '../../js/PetsCarousel';
-import { renderTestimonialsToDom, SCROLLBAR, TESTIMONIALS_CAROUSEL } from '../../js/TestimonialsCarousel';
-// import closePopup from '../../js/TestimonialPopUp';
+import { createSlides, renderCardsToDom } from '../../components/PetsCarousel';
+import { renderTestimonialsToDom, SCROLLBAR, TESTIMONIALS_CAROUSEL } from '../../components/TestimonialsCarousel';
+import closePopup from '../../components/TestimonialPopUp';
+import createDomNode from '../../utils/create-element';
+import { BURGER, toggleBurgerMenu } from '../../components/Burger';
 
 const backstageContent = document.querySelector('.backstage__content');
-const imageBambooCap = document.createElement('img');
-imageBambooCap.src = './assets/images/backstage/bamboo-cap.jpg';
+const imageBambooCap = createDomNode('img', 'backstage__image');
+imageBambooCap.src = './assets/images/backstage/bamboo-cap.jpg';;
 imageBambooCap.alt = 'Man in bamboo hat';
-imageBambooCap.classList.add('backstage__image');
 backstageContent.before(imageBambooCap);
 
 let isBurgerOpen = false;
 
 function resizeListener() {
+  const popup = document.querySelector('.popup');
+
+  if (window.innerWidth > 640 && popup) {
+    closePopup();
+  }
+
   if (window.innerWidth > 640 && BURGER.classList.contains('active')) {
     toggleBurgerMenu();
     isBurgerOpen = true;
