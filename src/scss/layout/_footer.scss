@@ -110,7 +110,7 @@
             &--gradient {
                 background: $_gradient-orange-bright;
                 color: $color-text;
-                background-image: linear-gradient(to right, $color-text, $color-text 33.333%, #F9804B 1.49%, #FE9013 101.44%);
+                background-image: $color-footer-links-gradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;

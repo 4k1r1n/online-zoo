@@ -1,7 +1,7 @@
 $_green: #4B9200;
 $_yellow: #FFEE2E;
 $_orange: #FE9013;
-$_gradient-orange-bright: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+$_gradient-orange-bright: linear-gradient(113.96deg, #F9804B 1.49%, $_orange 101.44%);
 $_gradient-orange-faded: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 $_gradient-pink: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
 $_red: #D31414;
@@ -42,6 +42,7 @@ $color-transparent: rgba(0, 0, 0, 0);
 $color-socials: rgba(196, 196, 196, 0.5);
 $color-amount-bar-track: #72828E;
 $color-amount-form-placeholder: #929699;
+$color-footer-links-gradient: linear-gradient(to right, $color-text, $color-text 33.333%, #F9804B 1.49%, $_orange);
 
 $content-width: 1160px;
 $desktop-width: 1440px;
