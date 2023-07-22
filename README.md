@@ -1,20 +1,21 @@
 # Online-zoo
 
-Online-zoo is a website with an adaptive layout and interactivity of the main and donation pages.
+Online-zoo is a website with an adaptive layout and interactivity of the landing and donate pages.
 
 [View Demo](https://4k1r1n.github.io/online-zoo/)
 
-## Tech Stack
+[Technical task](https://github.com/rolling-scopes-school/tasks/blob/master/stage1/stream2/online-zoo/README.md)
+## Stack
 - HTML5/SCSS/JS
 - Gulp
 
 ## Features
 ### Landing & Donate pages
 - Adaptive layout
-- The menu in the header turns into a burger menu (for screen widths of 640px or less)
+- Burger menu
 ### Landing page
-- Carousel in the Pets block for 1600px, 1000px, and 640px screen widths
-- Carousel in Testimonials block for 1600px and 1000px screen widths
+- Carousel in the Pets block
+- Carousel in Testimonials block
 - Popup when clicking on a review in the Testimonials block for 640px and 320px screen width
 ### Donate page
-- Amount panel in the Pick and feed a friend block for screen widths of 1600px, 1000px, 640px, and less
+- Amount panel in the Pick and Feed a friend block
