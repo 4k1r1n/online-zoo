@@ -1,37 +1,21 @@
-import createDomNode from '../utils/create-element';
+import { renderOverlay, removeOverlay } from './Overlay';
 
 const BURGER = document.querySelector('.burger');
 const HEADER = document.querySelector('.header');
 const navigationItems = document.querySelectorAll('.navigation__item');
 
-const renderOverlayToDom = (element) => {
-  const overlay = createDomNode('div', 'overlay');
-  element.append(overlay);
-  requestAnimationFrame(() => {
-    overlay.classList.add('in');
-  });
-  overlay.addEventListener('click', toggleBurgerMenu);
-};
-
-const removeOverlay = () => {
-  const overlay = document.querySelector('.overlay');
-  overlay.classList.remove('in');
-  overlay.addEventListener('transitionend', () => overlay.remove());
-  overlay.removeEventListener('click', toggleBurgerMenu);
-};
-
 const toggleBurgerMenu = () => {
   HEADER.classList.toggle('active');
   BURGER.classList.toggle('active');
   document.body.classList.toggle('lock');
-  toggleOverlay();
+  toggleBurgerOverlay();
 };
 
-const toggleOverlay = () => {
+const toggleBurgerOverlay = () => {
   if (BURGER.classList.contains('active')) {
-    renderOverlayToDom(HEADER);
+    renderOverlay(HEADER, toggleBurgerMenu);
   } else {
-    removeOverlay();
+    removeOverlay(toggleBurgerMenu);
   }
 };
 
@@ -47,4 +31,6 @@ navigationItems.forEach((navigationItem) => {
   });
 });
 
-export { BURGER, toggleBurgerMenu };
+export {
+  BURGER, toggleBurgerMenu, renderOverlay, removeOverlay,
+};
