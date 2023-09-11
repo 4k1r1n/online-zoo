@@ -18,6 +18,20 @@ Online-zoo is a website with an adaptive layout and interactivity of the landing
 ### Donate page
 - Amount panel in the Pick and Feed a friend block
 
+## Getting Started
+1. Clone the repo
+   ```sh
+   git clone https://github.com/4k1r1n/online-zoo
+   ```
+2. Install dependencies
+   ```sh
+   npm install
+   ```
+3. Run the application
+   ```sh
+   npm run dev
+   ```
+
 ## Acknowledgements
 Online-zoo was made for [RS school](https://rs.school/).  
 [Full task details](https://github.com/rolling-scopes-school/tasks/blob/master/stage1/stream2/online-zoo/README.md)
